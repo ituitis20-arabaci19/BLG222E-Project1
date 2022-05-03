@@ -5,7 +5,9 @@ INFO: [VRFC 10-311] analyzing module MUX2_1_8bit
 INFO: [VRFC 10-311] analyzing module MUX2_1_16bit
 INFO: [VRFC 10-311] analyzing module Full_Adder_1bit
 INFO: [VRFC 10-311] analyzing module Adder_Substractor_8bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_16bit
 INFO: [VRFC 10-311] analyzing module PART1_8bit
 INFO: [VRFC 10-311] analyzing module PART1_16bit
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module part1_8bit_test
+INFO: [VRFC 10-311] analyzing module part1_16bit_test

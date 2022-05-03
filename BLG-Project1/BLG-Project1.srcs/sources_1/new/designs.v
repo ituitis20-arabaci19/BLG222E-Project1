@@ -76,7 +76,22 @@ module MUX2_1_16bit(S0,S1,O,S);
     
     output wire [15:0] O;
     
-    assign O = (S0&(~S)) | (S1&S);
+    assign O[0] = (S0[0]&(~S)) | (S1[0]&S);
+    assign O[1] = (S0[1]&(~S)) | (S1[1]&S);
+    assign O[2] = (S0[2]&(~S)) | (S1[2]&S);
+    assign O[3] = (S0[3]&(~S)) | (S1[3]&S);
+    assign O[4] = (S0[4]&(~S)) | (S1[4]&S);
+    assign O[5] = (S0[5]&(~S)) | (S1[5]&S);
+    assign O[6] = (S0[6]&(~S)) | (S1[6]&S);
+    assign O[7] = (S0[7]&(~S)) | (S1[7]&S);
+    assign O[8] = (S0[8]&(~S)) | (S1[8]&S);
+    assign O[9] = (S0[9]&(~S)) | (S1[9]&S);
+    assign O[10] = (S0[10]&(~S)) | (S1[10]&S);
+    assign O[11] = (S0[11]&(~S)) | (S1[11]&S);
+    assign O[12] = (S0[12]&(~S)) | (S1[12]&S);
+    assign O[13] = (S0[13]&(~S)) | (S1[13]&S);
+    assign O[14] = (S0[14]&(~S)) | (S1[14]&S);
+    assign O[15] = (S0[15]&(~S)) | (S1[15]&S);
     
 endmodule
 
@@ -121,6 +136,20 @@ module Adder_Substractor_8bit(A,B,Cin,O,Cout);
     Full_Adder_1bit adder6(A[6],B[6],Cout5,O[6],Cout6);
     Full_Adder_1bit adder7(A[7],B[7],Cout6,O[7],Cout);
     
+endmodule
+
+module Adder_Substractor_16bit(A,B,Cin,O,Cout);
+    input wire [15:0] A;
+    input wire [15:0] B;
+    input wire Cin;
+    
+    output wire [15:0] O;
+    output wire Cout;
+    
+    wire cout0;
+    
+    Adder_Substractor_8bit as0(A[7:0],B[7:0],Cin,O[7:0],cout0);
+    Adder_Substractor_8bit as1(A[15:8],B[15:8],cout0,O[15:8],Cout);
 endmodule
 
 module PART1_8bit(E,FunSel,I,Q,CLK);
@@ -175,23 +204,23 @@ module PART1_16bit(E,FunSel,I,Q,CLK);
     //Mux if S=0, output is 0, if S=1, output is I
     //Also mean, S=0 is for clear, S=1 is for load
     wire [15:0] I_funsel_mux;
-    MUX2_1_8bit mux0(I,16'b0,I_funsel_mux,FunSel[0]);
+    MUX2_1_16bit mux0(I,16'b0,I_funsel_mux,FunSel[0]);
     
     //Mux if S=0, output is binary 1, if S=1, output is complement of it
     //S is cin for adder/substractor, so if S=1 is A-B(A+B+1), if S=0 A+B will be performed
     wire [15:0] add_subst_Bin;
-    MUX2_1_8bit mux1(16'b1,~(16'b1),add_subst_Bin,~FunSel[0]);
+    MUX2_1_16bit mux1(16'b1,~(16'b1),add_subst_Bin,~FunSel[0]);
     
     //If Cin is 1, it will decrement Q by one, if it is 0, it will increment Q by one
     wire [15:0] adder_subst_output;
     wire adder_subst_cout;
-    Adder_Substractor_8bit adder_substractor(Q,add_subst_Bin,~FunSel[0],adder_subst_output,adder_subst_cout);
+    Adder_Substractor_16bit adder_substractor(Q,add_subst_Bin,~FunSel[0],adder_subst_output,adder_subst_cout);
 
     //If the first bit of funsel is 1, register will be loaded or reseted
     //If the first bit of funsel is 0, register will be decremented or incremented by one
     //This mux will send proper inputs to D flip flops for these operations
     wire [15:0] D;
-    MUX2_1_8bit mux2(adder_subst_output,I_funsel_mux,D,FunSel[1]);
+    MUX2_1_16bit mux2(adder_subst_output,I_funsel_mux,D,FunSel[1]);
     
     //Synchronized D flip flops
     D_Flip_Flop dff0(D[0],CLK,Q[0],E);

@@ -1,0 +1,84 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Tue May  3 21:16:58 2022
+# Process ID: 15944
+# Current directory: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17064 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
+# Log file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/vivado.log
+# Journal file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/mertc/Desktop/BLG222E-Project1/AssignmentFiles/TestBench.v
+update_compile_order -fileset sim_1
+file mkdir C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v w ]
+add_files -fileset sim_1 C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top part1_8bit_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source part1_8bit_test.tcl
+close_sim
+launch_simulation
+source part1_8bit_test.tcl
+restart
+run 5 ns
+run 5 ns
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PART1_8bit [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source part1_8bit_test.tcl
+close_sim
+launch_simulation
+source part1_8bit_test.tcl
+close_sim
+launch_simulation
+source part1_8bit_test.tcl
+close_sim
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top part1_16bit_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+synth_design -rtl -name rtl_1
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
+launch_simulation
+source part1_16bit_test.tcl
+close_sim
