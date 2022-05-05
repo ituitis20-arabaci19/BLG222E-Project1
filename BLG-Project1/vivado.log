@@ -18,3 +18,280 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_LogicLab/Vivado/2017.4/data/ip'.
 update_compile_order -fileset sources_1
+set_property top PART2_c [current_fileset]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: PART2_c
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.633 ; gain = 112.664
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART2_c' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_16bit' (1#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (2#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (3#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_16bit' (4#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'PART1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (5#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (6#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_16bit' (7#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'PART2_c:/I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net S1[0] is connected to constant driver, other driver is ignored [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+INFO: [Synth 8-256] done synthesizing module 'PART2_c' (8#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+WARNING: [Synth 8-3917] design PART2_c has port I[7] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[6] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[5] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[4] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[3] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[2] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[1] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[0] driven by constant 0
+WARNING: [Synth 8-3331] design PART2_c has unconnected port RegSel[1]
+WARNING: [Synth 8-3331] design PART2_c has unconnected port RegSel[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 974.164 ; gain = 165.195
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 1st driver pin 'I[7]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 1st driver pin 'I[6]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 1st driver pin 'I[5]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 1st driver pin 'I[4]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 1st driver pin 'I[3]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 1st driver pin 'I[2]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 1st driver pin 'I[1]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 974.164 ; gain = 165.195
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1309.199 ; gain = 500.230
+20 Infos, 10 Warnings, 19 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1309.199 ; gain = 500.230
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1324.703 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART2_c' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_16bit' (1#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (2#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (3#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_16bit' (4#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'PART1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (5#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (6#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_16bit' (7#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'PART2_c:/I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net S1[0] is connected to constant driver, other driver is ignored [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+INFO: [Synth 8-256] done synthesizing module 'PART2_c' (8#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+WARNING: [Synth 8-3917] design PART2_c has port I[7] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[6] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[5] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[4] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[3] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[2] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[1] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.090 ; gain = 38.387
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 1st driver pin 'I[7]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 1st driver pin 'I[6]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 1st driver pin 'I[5]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 1st driver pin 'I[4]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 1st driver pin 'I[3]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 1st driver pin 'I[2]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 1st driver pin 'I[1]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.090 ; gain = 38.387
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1363.090 ; gain = 38.387
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.090 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART2_c' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_16bit' (1#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (2#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (3#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_16bit' (4#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'PART1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (5#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (6#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_16bit' (7#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'PART2_c:/I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net S1[0] is connected to constant driver, other driver is ignored [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:334]
+INFO: [Synth 8-256] done synthesizing module 'PART2_c' (8#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+WARNING: [Synth 8-3917] design PART2_c has port I[7] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[6] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[5] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[4] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[3] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[2] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[1] driven by constant 0
+WARNING: [Synth 8-3917] design PART2_c has port I[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1376.453 ; gain = 13.363
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 1st driver pin 'I[7]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[7] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 1st driver pin 'I[6]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[6] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 1st driver pin 'I[5]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[5] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 1st driver pin 'I[4]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[4] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 1st driver pin 'I[3]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[3] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 1st driver pin 'I[2]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[2] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 1st driver pin 'I[1]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[1] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 1st driver pin 'I[0]' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net S1[0] with 2nd driver pin 'GND' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        8|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1376.453 ; gain = 13.363
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1381.023 ; gain = 17.934
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1381.023 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART2_c' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_16bit' (1#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (2#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:118]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (3#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:131]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_16bit' (4#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:161]
+INFO: [Synth 8-638] synthesizing module 'PART1_16bit' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (5#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (6#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_16bit' (7#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:216]
+INFO: [Synth 8-256] done synthesizing module 'PART2_c' (8#1) [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:318]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1389.645 ; gain = 8.621
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[7] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[6] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[5] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[4] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[3] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[2] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[1] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S0[0] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[15] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[14] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[13] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[12] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[11] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[10] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[9] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+WARNING: [Synth 8-3295] tying undriven pin add_mux:S1[8] to constant 0 [C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:335]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1389.645 ; gain = 8.621
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.457 ; gain = 34.434
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May  6 01:39:31 2022...
