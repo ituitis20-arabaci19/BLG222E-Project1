@@ -289,7 +289,63 @@ module PART2_a(FunSel,OutASel,OutBSel,RegSel,I,OutA,OutB,CLK);
 
 endmodule
 
+module PART2_b(FunSel,OutCSel,OutDSel,RegSel,I,OutC,OutD,CLK);
+    input wire [1:0] FunSel;
+    input wire [1:0] OutCSel;
+    input wire [1:0] OutDSel;
+    input wire [2:0] RegSel;
+    input wire [7:0] I;
+    input wire CLK;
+    
+    wire [7:0] PC;
+    wire [7:0] AR;
+    wire [7:0] SP;
+    
+    output wire [7:0] OutC;
+    output wire [7:0] OutD;
+    
+    PART1_8bit PC_reg(~RegSel[2],FunSel,I,PC,CLK);
+    PART1_8bit AR_reg(~RegSel[1],FunSel,I,AR,CLK);    
+    PART1_8bit SR_reg(~RegSel[0],FunSel,I,SP,CLK);
+    
+    MUX4_1_8bit MUXA(PC,PC,AR,SP,OutC,OutCSel);
+    MUX4_1_8bit MUXB(PC,PC,AR,SP,OutD,OutDSel);
+    
+
+endmodule
 
 
+module PART2_c(E,LH,FunSel,I,IRout,CLK);
+    input wire E;
+    input wire LH;
+    input wire [1:0] FunSel;
+    input wire [7:0] I;
+    input wire CLK;
+    
+    wire [15:0] MASK;
+    MUX2_1_16bit mask_mux(16'b0000000011111111,16'b1111111100000000,MASK,LH);
+    
+    wire [15:0] ADD1;
+    wire [15:0] ADD2;
+    wire [8:0] CONST = 8'b0;
+    assign ADD1[15:8] = I|CONST;
+    assign ADD2[7:0] = I|CONST;
+    
+    wire [15:0] ADD_RESULT;
+    MUX2_1_16bit add_mux(ADD1,ADD2,ADD_RESULT,LH);
+    
+    output wire [15:0] IRout;
+    
+    wire [15:0] MASKED_LOAD;
+    assign MASKED_LOAD = IRout & MASK;
+    
+    wire [15:0] LOAD;
+    wire temp;
+    Adder_Substractor_16bit load_adder(MASKED_LOAD,ADD_RESULT,0,LOAD,temp);
+    
+    
+    PART1_16bit IR_reg(E,FunSel,LOAD,IRout,CLK);
+    
+endmodule
         
 

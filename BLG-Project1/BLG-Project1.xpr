@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.4.1 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f97be7fe3a3244819be057ad0ade57cb"/>
@@ -64,7 +64,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="PART1_8bit"/>
+        <Option Name="TopModule" Val="PART2_c"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
