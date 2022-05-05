@@ -68,6 +68,26 @@ module MUX2_1_8bit(S0,S1,O,S);
     assign O[7] = (S0[7]&(~S)) | (S1[7]&S);
     
 endmodule
+
+module MUX4_1_8bit(S0,S1,S2,S3,O,S);
+    input wire [7:0] S0;
+    input wire [7:0] S1;
+    input wire [7:0] S2;
+    input wire [7:0] S3;
+    input wire [1:0]S;
+    
+    output wire [7:0] O;
+    
+    assign O[0] = (S0[0]&(~S[0]&~S[1])) | (S1[0]&(S[0]&~S[1])) | (S2[0]&(~S[0]&S[1])) | (S3[0]&(S[0]&S[1]));
+    assign O[1] = (S0[1]&(~S[0]&~S[1])) | (S1[1]&(S[0]&~S[1])) | (S2[1]&(~S[0]&S[1])) | (S3[1]&(S[0]&S[1]));
+    assign O[2] = (S0[2]&(~S[0]&~S[1])) | (S1[2]&(S[0]&~S[1])) | (S2[2]&(~S[0]&S[1])) | (S3[2]&(S[0]&S[1]));
+    assign O[3] = (S0[3]&(~S[0]&~S[1])) | (S1[3]&(S[0]&~S[1])) | (S2[3]&(~S[0]&S[1])) | (S3[3]&(S[0]&S[1]));
+    assign O[4] = (S0[4]&(~S[0]&~S[1])) | (S1[4]&(S[0]&~S[1])) | (S2[4]&(~S[0]&S[1])) | (S3[4]&(S[0]&S[1]));
+    assign O[5] = (S0[5]&(~S[0]&~S[1])) | (S1[5]&(S[0]&~S[1])) | (S2[5]&(~S[0]&S[1])) | (S3[5]&(S[0]&S[1]));
+    assign O[6] = (S0[6]&(~S[0]&~S[1])) | (S1[6]&(S[0]&~S[1])) | (S2[6]&(~S[0]&S[1])) | (S3[6]&(S[0]&S[1]));
+    assign O[7] = (S0[7]&(~S[0]&~S[1])) | (S1[7]&(S[0]&~S[1])) | (S2[7]&(~S[0]&S[1])) | (S3[7]&(S[0]&S[1]));
+    
+endmodule
         
 module MUX2_1_16bit(S0,S1,O,S);
     input wire [15:0] S0;
@@ -241,6 +261,35 @@ module PART1_16bit(E,FunSel,I,Q,CLK);
     D_Flip_Flop dff15(D[15],CLK,Q[15],E);   
     
 endmodule
+
+module PART2_a(FunSel,OutASel,OutBSel,RegSel,I,OutA,OutB,CLK);
+    input wire [1:0] FunSel;
+    input wire [1:0] OutASel;
+    input wire [1:0] OutBSel;
+    input wire [3:0] RegSel;
+    input wire [7:0] I;
+    input wire CLK;
+    
+    wire [7:0] Q1;
+    wire [7:0] Q2;
+    wire [7:0] Q3;
+    wire [7:0] Q4;
+    
+    output wire [7:0] OutA;
+    output wire [7:0] OutB;
+    
+    PART1_8bit R1(~RegSel[3],FunSel,I,Q1,CLK);
+    PART1_8bit R2(~RegSel[2],FunSel,I,Q2,CLK);
+    PART1_8bit R3(~RegSel[1],FunSel,I,Q3,CLK);    
+    PART1_8bit R4(~RegSel[0],FunSel,I,Q4,CLK);
+    
+    MUX4_1_8bit MUXA(Q1,Q2,Q3,Q4,OutA,OutASel);
+    MUX4_1_8bit MUXB(Q1,Q2,Q3,Q4,OutB,OutBSel);
+    
+
+endmodule
+
+
 
         
 
