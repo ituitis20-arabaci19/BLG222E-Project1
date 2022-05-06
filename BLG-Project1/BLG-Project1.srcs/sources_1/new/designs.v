@@ -122,9 +122,11 @@ module Full_Adder_1bit(A,B,Cin,O,Cout);
     
     output wire O;
     output wire Cout;
-
+    
+    wire controlled_Cout = A&B | A&Cin | B&Cin;
+    
     assign O = Cin&~B&~A | ~Cin&B&~A | Cin&B&A | ~Cin&~B&A; 
-    assign Cout = A&B | A&Cin | B&Cin;
+    assign Cout = controlled_Cout===1'bX ? 1'b0 : controlled_Cout;
     
 endmodule
 
@@ -314,7 +316,6 @@ module PART2_b(FunSel,OutCSel,OutDSel,RegSel,I,OutC,OutD,CLK);
 
 endmodule
 
-
 module PART2_c(E,LH,FunSel,I,IRout,CLK);
     input wire E;
     input wire LH;
@@ -327,9 +328,12 @@ module PART2_c(E,LH,FunSel,I,IRout,CLK);
     
     wire [15:0] ADD1;
     wire [15:0] ADD2;
-    wire [8:0] CONST = 8'b0;
+    wire [7:0] CONST = 8'b0;
     assign ADD1[15:8] = I|CONST;
+    assign ADD1[7:0] = 8'b0;
+    
     assign ADD2[7:0] = I|CONST;
+    assign ADD2[15:8] = 8'b0;
     
     wire [15:0] ADD_RESULT;
     MUX2_1_16bit add_mux(ADD1,ADD2,ADD_RESULT,LH);
@@ -337,11 +341,11 @@ module PART2_c(E,LH,FunSel,I,IRout,CLK);
     output wire [15:0] IRout;
     
     wire [15:0] MASKED_LOAD;
-    assign MASKED_LOAD = IRout & MASK;
+    assign MASKED_LOAD = IRout&MASK;
     
     wire [15:0] LOAD;
     wire temp;
-    Adder_Substractor_16bit load_adder(MASKED_LOAD,ADD_RESULT,0,LOAD,temp);
+    Adder_Substractor_16bit load_adder(MASKED_LOAD,ADD_RESULT,1'b0,LOAD,temp);
     
     
     PART1_16bit IR_reg(E,FunSel,LOAD,IRout,CLK);

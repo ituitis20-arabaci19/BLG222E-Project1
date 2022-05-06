@@ -2,13 +2,152 @@
 # Vivado v2017.4.1 (64-bit)
 # SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
 # IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Fri May  6 01:42:42 2022
-# Process ID: 9420
+# Start of session at: Fri May  6 02:33:36 2022
+# Process ID: 20024
 # Current directory: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20568 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21268 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
 # Log file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/vivado.log
 # Journal file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PART2_c_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source PART2_c_test.tcl
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run all
+restart
+run 5 ns
+run 5 ns
+synth_design -rtl -name rtl_1
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+refresh_design
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+refresh_design
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+restart
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source PART2_c_test.tcl
+close_sim
+close_design
+launch_simulation
+source PART2_c_test.tcl
+close_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PART2_a_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source PART2_a_test.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top PART2_b_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source PART2_b_test.tcl
+close_sim

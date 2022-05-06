@@ -1,20 +1,20 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot part1_16bit_test_behav xil_defaultlib.part1_16bit_test xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART2_b_test_behav xil_defaultlib.PART2_b_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 2 for port FunSel [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v:54]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.MUX2_1_16bit
+Compiling module xil_defaultlib.MUX2_1_8bit
 Compiling module xil_defaultlib.Full_Adder_1bit
 Compiling module xil_defaultlib.Adder_Substractor_8bit
-Compiling module xil_defaultlib.Adder_Substractor_16bit
 Compiling module xil_defaultlib.D_Latch
 Compiling module xil_defaultlib.D_Flip_Flop
-Compiling module xil_defaultlib.PART1_16bit
-Compiling module xil_defaultlib.part1_16bit_test
+Compiling module xil_defaultlib.PART1_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.PART2_b
+Compiling module xil_defaultlib.PART2_b_test
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot part1_16bit_test_behav
+Built simulation snapshot PART2_b_test_behav

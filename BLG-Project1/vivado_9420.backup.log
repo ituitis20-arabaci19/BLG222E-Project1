@@ -2,15 +2,16 @@
 # Vivado v2017.4.1 (64-bit)
 # SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
 # IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Tue May  3 20:56:48 2022
-# Process ID: 11960
+# Start of session at: Fri May  6 01:42:42 2022
+# Process ID: 9420
 # Current directory: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15812 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20568 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
 # Log file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/vivado.log
 # Journal file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -18,4 +19,4 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue May  3 20:57:13 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri May  6 01:43:14 2022...
