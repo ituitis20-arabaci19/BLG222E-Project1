@@ -90,14 +90,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../AssignmentFiles/TestBench.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_1/imports/AssignmentFiles/TestBench.mem">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../AssignmentFiles/TestBench.mem"/>

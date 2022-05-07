@@ -810,3 +810,573 @@ selectCodeEditor("simulations.v", 372, 145); // cd (w, cj)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 49 MB. Current time: 5/7/22 10:57:06 PM EEST
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 48 MB. Current time: 5/7/22 11:27:09 PM EEST
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 48 MB. Current time: 5/7/22 11:57:11 PM EEST
+// Elapsed time: 4378 seconds
+selectCodeEditor("simulations.v", 27, 180); // cd (w, cj)
+typeControlKey((HResource) null, "simulations.v", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "simulations.v", 2); // k (j, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("simulations.v", 347, 152); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1); // k (j, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "simulations.v", 2); // k (j, cj)
+selectCodeEditor("simulations.v", 44, 401); // cd (w, cj)
+typeControlKey((HResource) null, "simulations.v", 'c'); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1); // k (j, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("designs.v", 111, 127); // cd (w, cj)
+selectCodeEditor("designs.v", 104, 126); // cd (w, cj)
+selectCodeEditor("designs.v", 26, 129); // cd (w, cj)
+// Elapsed time: 87 seconds
+selectCodeEditor("designs.v", 184, 144); // cd (w, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("designs.v", 174, 159); // cd (w, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("designs.v", 174, 175); // cd (w, cj)
+// Elapsed time: 23 seconds
+selectCodeEditor("designs.v", 110, 197); // cd (w, cj)
+selectCodeEditor("designs.v", 100, 197); // cd (w, cj)
+selectCodeEditor("designs.v", 29, 194); // cd (w, cj)
+selectCodeEditor("designs.v", 147, 180); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 27, 197); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("designs.v", 118, 214); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 227, 217); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 233); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 226, 227); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 212); // cd (w, cj)
+selectCodeEditor("designs.v", 113, 270); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 214); // cd (w, cj)
+selectCodeEditor("designs.v", 222, 259); // cd (w, cj)
+// Elapsed time: 23 seconds
+selectCodeEditor("designs.v", 77, 283); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 145, 282); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 170, 312); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("designs.v", 85, 329); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("designs.v", 28, 332); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 146, 331); // cd (w, cj)
+selectCodeEditor("designs.v", 83, 351); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 146, 345); // cd (w, cj)
+selectCodeEditor("designs.v", 150, 350); // cd (w, cj)
+selectCodeEditor("designs.v", 91, 365); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 119, 373); // cd (w, cj)
+selectCodeEditor("designs.v", 203, 364); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 379); // cd (w, cj)
+selectCodeEditor("designs.v", 146, 399); // cd (w, cj)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 116, 419); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 79 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Project1Test (TestBench.v)]", 16, true); // B (D, cj) - Node
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "1"); // h (f, cj)
+// Elapsed time: 58 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Project1Test (TestBench.v)]", 16, true, false, false, false, true, false); // B (D, cj) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, cj)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as (cj): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (as)
+dismissDialog("Remove Sources"); // as (cj)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/AssignmentFiles/TestBench.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset sim_1 C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/AssignmentFiles/TestBench.v 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Project1Test (simulations.v)]", 16, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Project1Test (simulations.v)]", 16, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1); // k (j, cj)
+selectCodeEditor("designs.v", 57, 639); // cd (w, cj)
+// Elapsed time: 144 seconds
+selectCodeEditor("designs.v", 344, 248); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1); // k (j, cj)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "designs.v", 1, false, true); // k (j, cj) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // R (Q, cj)
+floatView(PAResourceOtoP.PAViews_CODE, "designs.v"); // ax (aF, cj)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "designs.v"); // ax (aF, FrameFloatingContainer)
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "designs.v"); // ax (aF, FrameFloatingContainer)
+dockFrame(PAResourceOtoP.PAViews_CODE, "designs.v"); // ax (aF, FrameFloatingContainer)
+// PAResourceOtoP.PAViews_CODE: Code: dock view
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // U (q, cj)
+selectMenu(PAResourceItoN.MainMenuMgr_UNSELECT_TYPE, "Unselect Type"); // Z (cj)
+selectMenu(PAResourceItoN.MainMenuMgr_UNSELECT_TYPE, "Unselect Type"); // Z (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // U (q, cj)
+selectCodeEditor("designs.v", 548, 40); // cd (w, cj)
+// [GUI Memory]: 156 MB (+11439kb) [03:51:16]
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // U (q, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_ZOOM_OUT, "Zoom Out"); // ac (cj)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // U (q, cj)
+selectCodeEditor("designs.v", 400, 92); // cd (w, cj)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("designs.v", 86, 604); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("designs.v", 77, 607); // cd (w, cj)
+// Elapsed time: 18 seconds
+selectCodeEditor("designs.v", 199, 637); // cd (w, cj)
+selectCodeEditor("designs.v", 199, 637); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 174, 656); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 130, 674); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("designs.v", 189, 669); // cd (w, cj)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 21 seconds
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 330, 684); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 710); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("designs.v", 230, 364); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("designs.v", 160, 706); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 22 seconds
+selectCodeEditor("designs.v", 235, 720); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 33 seconds
+selectCodeEditor("designs.v", 133, 690); // cd (w, cj)
+selectCodeEditor("designs.v", 190, 690); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("designs.v", 189, 710); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 61 seconds
+selectCodeEditor("designs.v", 238, 701); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 187, 617); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 21 seconds
+selectCodeEditor("designs.v", 460, 229); // cd (w, cj)
+selectCodeEditor("designs.v", 211, 586); // cd (w, cj)
+selectCodeEditor("designs.v", 48, 93); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 184, 552); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 78, 580); // cd (w, cj)
+selectCodeEditor("designs.v", 186, 108); // cd (w, cj)
+selectCodeEditor("designs.v", 186, 108, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 197, 589); // cd (w, cj)
+selectCodeEditor("designs.v", 197, 589, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 184, 76); // cd (w, cj)
+selectCodeEditor("designs.v", 184, 76, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 265, 584); // cd (w, cj)
+selectCodeEditor("designs.v", 265, 584, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 194, 97); // cd (w, cj)
+selectCodeEditor("designs.v", 194, 97, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 347, 580); // cd (w, cj)
+selectCodeEditor("designs.v", 347, 580, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 188, 128); // cd (w, cj)
+selectCodeEditor("designs.v", 188, 128, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 432, 585); // cd (w, cj)
+selectCodeEditor("designs.v", 432, 585, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 143, 536); // cd (w, cj)
+selectCodeEditor("designs.v", 143, 536, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 480, 591); // cd (w, cj)
+selectCodeEditor("designs.v", 480, 591, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 120, 416); // cd (w, cj)
+selectCodeEditor("designs.v", 120, 416, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 132, 366); // cd (w, cj)
+selectCodeEditor("designs.v", 132, 366, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 616, 585); // cd (w, cj)
+selectCodeEditor("designs.v", 616, 585, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 557, 592); // cd (w, cj)
+// [GUI Memory]: 164 MB (+599kb) [03:58:35]
+// Elapsed time: 32 seconds
+selectCodeEditor("designs.v", 50, 282); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 70, 552); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 80, 557); // cd (w, cj)
+selectCodeEditor("designs.v", 186, 129); // cd (w, cj)
+selectCodeEditor("designs.v", 186, 129, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 130, 553); // cd (w, cj)
+selectCodeEditor("designs.v", 129, 551, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 198, 96); // cd (w, cj)
+selectCodeEditor("designs.v", 198, 96, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 230, 552); // cd (w, cj)
+selectCodeEditor("designs.v", 230, 552, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 200, 116); // cd (w, cj)
+selectCodeEditor("designs.v", 200, 116, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 295, 560); // cd (w, cj)
+selectCodeEditor("designs.v", 295, 560, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 185, 142); // cd (w, cj)
+selectCodeEditor("designs.v", 185, 142, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 382, 553); // cd (w, cj)
+selectCodeEditor("designs.v", 382, 553, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 124, 482); // cd (w, cj)
+selectCodeEditor("designs.v", 124, 482, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 436, 551); // cd (w, cj)
+selectCodeEditor("designs.v", 436, 551, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 438, 551); // cd (w, cj)
+selectCodeEditor("designs.v", 438, 551, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 400); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 400, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 499, 551); // cd (w, cj)
+selectCodeEditor("designs.v", 499, 551, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 136, 421); // cd (w, cj)
+selectCodeEditor("designs.v", 136, 421, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 551, 547); // cd (w, cj)
+selectCodeEditor("designs.v", 551, 547, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 121, 307); // cd (w, cj)
+selectCodeEditor("designs.v", 121, 307, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 122, 299); // cd (w, cj)
+selectCodeEditor("designs.v", 122, 299, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 511, 554); // cd (w, cj)
+selectCodeEditor("designs.v", 511, 554, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 475, 516); // cd (w, cj)
+selectCodeEditor("designs.v", 475, 516, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 516, 558); // cd (w, cj)
+selectCodeEditor("designs.v", 516, 558, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 54 MB. Current time: 5/8/22 12:27:12 AM EEST
+// Elapsed time: 24 seconds
+selectCodeEditor("designs.v", 48, 298); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 58, 575); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 257, 689); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("designs.v", 141, 433); // cd (w, cj)
+selectCodeEditor("designs.v", 141, 433, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 179, 674); // cd (w, cj)
+selectCodeEditor("designs.v", 179, 674, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 140, 673); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("designs.v", 133, 285); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 285, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 141, 706); // cd (w, cj)
+selectCodeEditor("designs.v", 141, 706, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 708); // cd (w, cj)
+selectCodeEditor("designs.v", 134, 708); // cd (w, cj)
+selectCodeEditor("designs.v", 135, 266); // cd (w, cj)
+selectCodeEditor("designs.v", 135, 266, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 138, 692); // cd (w, cj)
+selectCodeEditor("designs.v", 138, 692, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 691); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 437); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 437, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 183, 675); // cd (w, cj)
+selectCodeEditor("designs.v", 183, 675, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 167, 674); // cd (w, cj)
+selectCodeEditor("designs.v", 166, 657); // cd (w, cj)
+selectCodeEditor("designs.v", 177, 468); // cd (w, cj)
+selectCodeEditor("designs.v", 177, 468, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 98, 641); // cd (w, cj)
+selectCodeEditor("designs.v", 98, 641, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 71, 641); // cd (w, cj)
+selectCodeEditor("designs.v", 484, 636); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("designs.v", 51, 126); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 57, 574); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 80, 573); // cd (w, cj)
+selectCodeEditor("designs.v", 282, 578); // cd (w, cj)
+selectCodeEditor("designs.v", 279, 562); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 248); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 248, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 258, 571); // cd (w, cj)
+selectCodeEditor("designs.v", 258, 571, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("designs.v", 473, 538); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("designs.v", 131, 567); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 567, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 217, 603); // cd (w, cj)
+selectCodeEditor("designs.v", 217, 603, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 418, 536); // cd (w, cj)
+selectCodeEditor("designs.v", 418, 536, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 192, 604); // cd (w, cj)
+selectCodeEditor("designs.v", 192, 604, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 195, 603); // cd (w, cj)
+selectCodeEditor("designs.v", 195, 603, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 184, 145); // cd (w, cj)
+selectCodeEditor("designs.v", 184, 145, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 156, 603); // cd (w, cj)
+selectCodeEditor("designs.v", 156, 603, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 112); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 112, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 129, 606); // cd (w, cj)
+selectCodeEditor("designs.v", 129, 606, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 123, 131); // cd (w, cj)
+selectCodeEditor("designs.v", 123, 131, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 111, 604); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 458, 606); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 403); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 403, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 100, 642); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 378, 604); // cd (w, cj)
+selectCodeEditor("designs.v", 378, 604, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+typeControlKey(null, null, 'z');
+selectCodeEditor("designs.v", 378, 608); // cd (w, cj)
+selectCodeEditor("designs.v", 378, 608, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 235, 646); // cd (w, cj)
+selectCodeEditor("designs.v", 234, 642); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 66 seconds
+selectCodeEditor("designs.v", 48, 212); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("designs.v", 80, 574); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 109, 569); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("designs.v", 109, 536); // cd (w, cj)
+selectCodeEditor("designs.v", 109, 536, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 155, 566); // cd (w, cj)
+selectCodeEditor("designs.v", 155, 566, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 315, 498); // cd (w, cj)
+selectCodeEditor("designs.v", 315, 498, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 214, 570); // cd (w, cj)
+selectCodeEditor("designs.v", 214, 570, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 134, 242); // cd (w, cj)
+selectCodeEditor("designs.v", 134, 242, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 273, 568); // cd (w, cj)
+selectCodeEditor("designs.v", 273, 568, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 127, 228); // cd (w, cj)
+selectCodeEditor("designs.v", 127, 228, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 323, 569); // cd (w, cj)
+selectCodeEditor("designs.v", 323, 569, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 313); // cd (w, cj)
+selectCodeEditor("designs.v", 133, 313, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 369, 572); // cd (w, cj)
+selectCodeEditor("designs.v", 369, 572, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 181, 334); // cd (w, cj)
+selectCodeEditor("designs.v", 171, 335); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("designs.v", 178, 194); // cd (w, cj)
+selectCodeEditor("designs.v", 178, 194, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 424, 690); // cd (w, cj)
+selectCodeEditor("designs.v", 424, 690, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 500, 685); // cd (w, cj)
+// Elapsed time: 13 seconds
+selectCodeEditor("designs.v", 117, 206); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 15 seconds
+selectCodeEditor("designs.v", 494, 567); // cd (w, cj)
+selectCodeEditor("designs.v", 500, 569); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 143, 585); // cd (w, cj)
+selectCodeEditor("designs.v", 178, 585); // cd (w, cj)
+selectCodeEditor("designs.v", 178, 585, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 200, 589); // cd (w, cj)
+selectCodeEditor("designs.v", 200, 589, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 152, 584); // cd (w, cj)
+selectCodeEditor("designs.v", 180, 569); // cd (w, cj)
+selectCodeEditor("designs.v", 180, 569, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 205, 586); // cd (w, cj)
+selectCodeEditor("designs.v", 205, 586, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 236, 562); // cd (w, cj)
+selectCodeEditor("designs.v", 236, 562, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 269, 586); // cd (w, cj)
+selectCodeEditor("designs.v", 269, 586, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 398, 587); // cd (w, cj)
+selectCodeEditor("designs.v", 436, 583); // cd (w, cj)
+selectCodeEditor("designs.v", 490, 592); // cd (w, cj)
+// Elapsed time: 27 seconds
+selectCodeEditor("designs.v", 47, 230); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 472, 571); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 132, 214); // cd (w, cj)
+selectCodeEditor("designs.v", 132, 214, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 591); // cd (w, cj)
+selectCodeEditor("designs.v", 118, 591, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 117, 161); // cd (w, cj)
+selectCodeEditor("designs.v", 117, 161, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 168, 587); // cd (w, cj)
+selectCodeEditor("designs.v", 168, 587, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 137, 314); // cd (w, cj)
+selectCodeEditor("designs.v", 137, 314, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 201, 588); // cd (w, cj)
+selectCodeEditor("designs.v", 201, 588, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 128, 96); // cd (w, cj)
+selectCodeEditor("designs.v", 128, 96, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 257, 586); // cd (w, cj)
+selectCodeEditor("designs.v", 257, 586, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 330, 590); // cd (w, cj)
+selectCodeEditor("designs.v", 328, 584); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("designs.v", 50, 124); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 329, 544); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 63, 574); // cd (w, cj)
+selectCodeEditor("designs.v", 104, 536); // cd (w, cj)
+selectCodeEditor("designs.v", 266, 536); // cd (w, cj)
+selectCodeEditor("designs.v", 266, 536, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 99, 574); // cd (w, cj)
+selectCodeEditor("designs.v", 99, 574, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("designs.v", 103, 575); // cd (w, cj)
+selectCodeEditor("designs.v", 103, 575, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 122, 127); // cd (w, cj)
+selectCodeEditor("designs.v", 122, 127, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 160, 569); // cd (w, cj)
+selectCodeEditor("designs.v", 160, 569, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 188, 44); // cd (w, cj)
+selectCodeEditor("designs.v", 188, 44, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 218, 552); // cd (w, cj)
+selectCodeEditor("designs.v", 218, 552, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 39 seconds
+selectCodeEditor("designs.v", 124, 144); // cd (w, cj)
+selectCodeEditor("designs.v", 124, 144, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 384, 655); // cd (w, cj)
+selectCodeEditor("designs.v", 384, 655, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 173, 486); // cd (w, cj)
+selectCodeEditor("designs.v", 36, 361); // cd (w, cj)
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+selectCodeEditor("designs.v", 59, 382); // cd (w, cj)
+// Elapsed time: 16 seconds
+selectCodeEditor("designs.v", 185, 301); // cd (w, cj)
+// Elapsed time: 24 seconds
+selectCodeEditor("designs.v", 178, 315); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("designs.v", 341, 626); // cd (w, cj)
+selectCodeEditor("designs.v", 341, 626, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'c'); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 335); // cd (w, cj)
+selectCodeEditor("designs.v", 131, 335, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "designs.v", 'v'); // cd (w, cj)
+// Elapsed time: 45 seconds
+selectCodeEditor("designs.v", 428, 260); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("designs.v", 225, 636); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "simulations.v", 1); // k (j, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

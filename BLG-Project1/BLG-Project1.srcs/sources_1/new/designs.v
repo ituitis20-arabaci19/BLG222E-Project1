@@ -461,5 +461,58 @@ module Memory(
         end
     end
 endmodule
+
+module ALUSystem(
+    input wire [1:0] RF_OutASel, 
+    input wire [1:0] RF_OutBSel, 
+    input wire [1:0] RF_FunSel,
+    input wire [3:0] RF_RegSel,
+    input wire [3:0] ALU_FunSel,
+    input wire [1:0] ARF_OutCSel, 
+    input wire [1:0] ARF_OutDSel, 
+    input wire [1:0] ARF_FunSel,
+    input wire [2:0] ARF_RegSel,
+    input wire IR_LH,
+    input wire IR_Enable,
+    input wire [1:0] IR_Funsel,
+    input wire Mem_WR,
+    input wire Mem_CS,
+    input wire [1:0] MuxASel,
+    input wire [1:0] MuxBSel,
+    input wire MuxCSel,
+    input wire Clock
+    );
+    
+    wire [7:0] OutA;
+    wire [7:0] OutB;
+    wire [7:0] OutALU;
+    wire [7:0] OutARF; //address register file part2b
+    wire [7:0] OutARF_Address;
+    wire [7:0] Memory_I;
+    wire [7:0] OutIR07;//IR(0-7)
+    wire [7:0] OutMUXA;
+    wire [7:0] OutMUXB;
+    wire [7:0] OutMUXC;
+    wire [15:0] temp_I;
+    wire [3:0] OutFlag;
+    
+    PART2_a register_file(RF_FunSel,RF_OutASel,RF_OutBSel,RF_RegSel,OutMUXA,OutA,OutB,Clock);
+    
+    PART2_b ARF(ARF_FunSel,ARF_OutCSel,ARF_OutDSel,ARF_RegSel,OutMUXB,OutARF,OutARF_Address,Clock);
+    
+    Memory mem(OutARF_Address,OutALU,Mem_WR,Mem_CS,Clock,Memory_I);
+    
+    
+    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,Memory_I,temp_I,Clock);
+    
+    assign OutIR07 = temp_I[7:0];
+    
+    MUX4_1_8bit MUXA(OutIR07,Memory_I,OutARF,OutALU,OutMUXA,MuxASel);
+    MUX4_1_8bit MUXB(1'b0,OutIR07,Memory_I,OutALU,OutMUXB,MuxBSel);
+    MUX2_1_8bit MUXC(OutARF,OutA,OutMUXC,MuxCSel);
+    
+    PART3 ALU(OutMUXC,OutB,ALU_FunSel,OutALU,OutFlag,Clock);
+    
+endmodule
         
 
