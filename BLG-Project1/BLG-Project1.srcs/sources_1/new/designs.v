@@ -88,6 +88,42 @@ module MUX4_1_8bit(S0,S1,S2,S3,O,S);
     assign O[7] = (S0[7]&(~S[0]&~S[1])) | (S1[7]&(S[0]&~S[1])) | (S2[7]&(~S[0]&S[1])) | (S3[7]&(S[0]&S[1]));
     
 endmodule
+
+module MUX16_4_8bit(S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,O,S);
+    input wire [7:0] S0;
+    input wire [7:0] S1;
+    input wire [7:0] S2;
+    input wire [7:0] S3;
+    input wire [7:0] S4;
+    input wire [7:0] S5;
+    input wire [7:0] S6;
+    input wire [7:0] S7;
+    input wire [7:0] S8;
+    input wire [7:0] S9;
+    input wire [7:0] S10;
+    input wire [7:0] S11;   
+    input wire [7:0] S12;
+    input wire [7:0] S13;
+    input wire [7:0] S14;
+    input wire [7:0] S15;
+    input wire [4:0]S;
+    
+    wire [7:0] first;
+    wire [7:0] second;
+    wire [7:0] third;
+    wire [7:0] fourth;
+    
+    MUX4_1_8bit m1(S0,S1,S2,S3,first,S[1:0]);
+    MUX4_1_8bit m2(S4,S5,S6,S7,second,S[1:0]);
+    MUX4_1_8bit m3(S8,S9,S10,S11,third,S[1:0]);
+    MUX4_1_8bit m4(S12,S13,S14,S15,fourth,S[1:0]);
+    
+    output wire [7:0] O;
+    
+    MUX4_1_8bit final(first,second,third,fourth,O,S[3:2]);
+    
+endmodule
+
         
 module MUX2_1_16bit(S0,S1,O,S);
     input wire [15:0] S0;
@@ -113,6 +149,15 @@ module MUX2_1_16bit(S0,S1,O,S);
     assign O[14] = (S0[14]&(~S)) | (S1[14]&S);
     assign O[15] = (S0[15]&(~S)) | (S1[15]&S);
     
+endmodule
+
+module MUX2_1_1bit(S0,S1,O,S);
+    input S0;
+    input S1;
+    output O;
+    input S;
+    
+    assign O = S0&~S | S1&S; 
 endmodule
 
 module Full_Adder_1bit(A,B,Cin,O,Cout);
@@ -350,6 +395,46 @@ module PART2_c(E,LH,FunSel,I,IRout,CLK);
     
     PART1_16bit IR_reg(E,FunSel,LOAD,IRout,CLK);
     
+endmodule
+
+module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
+    input wire [7:0] A;
+    input wire [7:0] B;
+    input wire [3:0] FunSel;
+    output wire [7:0] OutALU;
+    output wire [3:0] OutFlag;
+    input wire CLK;
+    
+    
+    //adder
+    wire [7:0] B_adder;
+    
+    MUX2_1_8bit adder(B,~B,B_adder,FunSel[1]);
+    
+    wire cin;
+    wire cout;
+    
+    MUX2_1_1bit mux_cin((FunSel[0]|FunSel[1]),OutFlag[2],cin,FunSel[0]);
+    
+    wire [7:0]adder_result;
+    
+    Adder_Substractor_8bit(A,B_adder,cin,adder_result,cout);
+    
+    wire [7:0] shift;
+    
+    
+    //shifter 
+    MUX2_1_1bit sf0((OutFlag[2]&FunSel[1]&FunSel[2]),A[1],shift[0],FunSel[0]);
+    MUX2_1_1bit sf1(A[0],A[2],shift[1],FunSel[0]);
+    MUX2_1_1bit sf2(A[1],A[3],shift[2],FunSel[0]);
+    MUX2_1_1bit sf3(A[2],A[4],shift[3],FunSel[0]);
+    MUX2_1_1bit sf4(A[3],A[5],shift[4],FunSel[0]);
+    MUX2_1_1bit sf5(A[4],A[6],shift[5],FunSel[0]);
+    MUX2_1_1bit sf6(A[5],A[7],shift[6],FunSel[0]);
+    MUX2_1_1bit sf7(A[6],((OutFlag[2]&FunSel[1]&FunSel[2])|(A[7]&~FunSel[1]&FunSel[2])),shift[7],FunSel[0]);
+    
+    MUX16_4_8bit alu(A,B,~A,~B,adder_result,adder_result,adder_result,(A&B),(A|B),((A&~B)|(~A&B)),shift,shift,shift,shift,shift,shift,OutALU,FunSel);
+
 endmodule
         
 
