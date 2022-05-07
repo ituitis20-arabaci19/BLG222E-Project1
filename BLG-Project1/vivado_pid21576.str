@@ -1,0 +1,88 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 21576
+License: Customer
+
+Current time: 	Sat May 07 20:26:55 EEST 2022
+Time zone: 	Eastern European Time (Asia/Istanbul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 130 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx_LogicLab/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx_LogicLab/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	CCT
+User home directory: C:/Users/CCT
+User working directory: C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1
+User country: 	TR
+User language: 	tr
+User locale: 	tr_TR
+
+RDI_BASEROOT: C:/Xilinx_LogicLab/Vivado
+HDI_APPROOT: C:/Xilinx_LogicLab/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx_LogicLab/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx_LogicLab/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/CCT/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/CCT/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/CCT/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx_LogicLab/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/vivado.log
+Vivado journal file location: 	C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/vivado.jou
+Engine tmp dir: 	C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/.Xil/Vivado-21576-CCT-monster
+
+GUI allocated memory:	183 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 579 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\CCT\Desktop\Homeworks\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr. Version: Vivado v2017.4.1 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr 
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [GUI Memory]: 69 MB (+69393kb) [00:00:08]
+// [Engine Memory]: 512 MB (+385608kb) [00:00:08]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 89 MB (+18193kb) [00:00:08]
+// [Engine Memory]: 544 MB (+6727kb) [00:00:09]
+// [GUI Memory]: 94 MB (+589kb) [00:00:09]
+// [GUI Memory]: 106 MB (+6740kb) [00:00:10]
+// [Engine Memory]: 575 MB (+3347kb) [00:00:10]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_LogicLab/Vivado/2017.4/data/ip'. 
+// Project name: BLG-Project1; location: C:/Users/CCT/Desktop/Homeworks/BLG222E-Project1/BLG-Project1; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 590 MB. GUI used memory: 97 MB. Current time: 5/7/22 8:26:56 PM EEST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 607 MB (+3316kb) [00:00:13]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 111 MB (+61kb) [00:25:17]
+// HMemoryUtils.trashcanNow. Engine heap size: 608 MB. GUI used memory: 41 MB. Current time: 5/7/22 8:56:59 PM EEST
