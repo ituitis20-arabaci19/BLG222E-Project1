@@ -171,7 +171,27 @@ module PART3_test();
     end  
     
     initial begin
-        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1010;#25;           
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0000;#25;
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0001;#25;  
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0010;#25;  
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0011;#25;  
+        A = 8'b10101010; B = 8'b01010101; FunSel = 4'b0100;#25;
+        A = 8'b10101010; B = 8'b01010101; FunSel = 4'b0101;#25;
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0101;#25; //111001000
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0101;#25; //111001001
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0110;#25; //11111111
+        A = 8'b11100100; B = 8'b01100100; FunSel = 4'b0110;#25; //101111111
+        A = 8'b11100100; B = 8'b01100100; FunSel = 4'b0111;#25; //101111111  
+        A = 8'b11100100; B = 8'b00011011; FunSel = 4'b0111;#25; //00000000  
+        A = 8'b11100100; B = 8'b01100100; FunSel = 4'b1000;#25; //101111111  
+        A = 8'b11100100; B = 8'b01100100; FunSel = 4'b1001;#25; //101111111 
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1001;#25; //101111111 
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1111;#25; //01110010  
+        A = 8'b01110010; B = 8'b11100100; FunSel = 4'b1110;#25; //11100100      
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1010;#25; //11001000 c 1  
+        A = 8'b01110010; B = 8'b11100100; FunSel = 4'b1011;#25; //00111001
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1100;#25; //11001000  
+        A = 8'b01110010; B = 8'b11100100; FunSel = 4'b1101;#25; //00111001     
     end
 endmodule
 
@@ -193,7 +213,7 @@ module Project1Test();
     reg      Mem_CS;
     reg[1:0] MuxASel;
     reg[1:0] MuxBSel;
-    reg[1:0] MuxCSel;
+    reg MuxCSel;
     reg      Clock;
     
     //Test Bench Connection of ALU System
@@ -220,7 +240,7 @@ module Project1Test();
     
     //Test Vector Variables
     reg [31:0] VectorNum, Errors, TotalLine; 
-    reg [35:0] TestVectors[10000:0];
+    reg [34:0] TestVectors[10000:0];
     reg Reset, Operation;
     
     //Clock Signal Generation
@@ -231,7 +251,7 @@ module Project1Test();
     
     //Read Test Bench Values
     initial begin
-        $readmemb("alusystem_tb.mem", TestVectors); // Read vectors
+        $readmemb("TestBench.mem", TestVectors); // Read vectors
         VectorNum = 0; Errors = 0; TotalLine=0; Reset=0;// Initialize
     end
     
@@ -269,7 +289,7 @@ module Project1Test();
             
             // increment array index and read next testvector
             VectorNum = VectorNum + 1;
-            if (TestVectors[VectorNum] === 4'bx)
+            if (TestVectors[VectorNum] === 35'bx)
             begin
                 $display("%d tests completed.",
                 VectorNum);

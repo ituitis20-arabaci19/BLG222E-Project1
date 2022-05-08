@@ -51,6 +51,20 @@ module D_Flip_Flop(D,CLK,Q,E);
 
 endmodule
 
+module MUX2_1_4bit(S0,S1,O,S);
+    input wire [3:0] S0;
+    input wire [3:0] S1;
+    input wire S;
+    
+    output wire [3:0] O;
+    
+    assign O[0] = (S0[0]&(~S)) | (S1[0]&S);
+    assign O[1] = (S0[1]&(~S)) | (S1[1]&S);
+    assign O[2] = (S0[2]&(~S)) | (S1[2]&S);
+    assign O[3] = (S0[3]&(~S)) | (S1[3]&S);
+    
+endmodule
+
 module MUX2_1_8bit(S0,S1,O,S);
     input wire [7:0] S0;
     input wire [7:0] S1;
@@ -170,8 +184,30 @@ module Full_Adder_1bit(A,B,Cin,O,Cout);
     
     wire controlled_Cout = A&B | A&Cin | B&Cin;
     
-    assign O = Cin&~B&~A | ~Cin&B&~A | Cin&B&A | ~Cin&~B&A; 
+    assign O = Cin===1'bX ? 1'b0 : Cin&~B&~A | ~Cin&B&~A | Cin&B&A | ~Cin&~B&A; 
     assign Cout = controlled_Cout===1'bX ? 1'b0 : controlled_Cout;
+    
+endmodule
+
+module Adder_Substractor_4bit(A,B,Cin,O,Cout);
+    input wire [3:0] A;
+    input wire [3:0] B;
+    input wire Cin;
+    
+    output wire [3:0] O;
+    output wire Cout;
+    
+    wire B0 = Cin&~B[0] | ~Cin&B[0];
+    wire B1 = Cin&~B[1] | ~Cin&B[1];
+    wire B2 = Cin&~B[2] | ~Cin&B[2];
+    wire B3 = Cin&~B[3] | ~Cin&B[3];
+    
+    wire Cout0, Cout1, Cout2;
+    
+    Full_Adder_1bit adder0(A[0],B[0],Cin,O[0],Cout0);
+    Full_Adder_1bit adder1(A[1],B[1],Cout0,O[1],Cout1);
+    Full_Adder_1bit adder2(A[2],B[2],Cout1,O[2],Cout2);
+    Full_Adder_1bit adder3(A[3],B[3],Cout2,O[3],Cout);
     
 endmodule
 
@@ -217,6 +253,43 @@ module Adder_Substractor_16bit(A,B,Cin,O,Cout);
     
     Adder_Substractor_8bit as0(A[7:0],B[7:0],Cin,O[7:0],cout0);
     Adder_Substractor_8bit as1(A[15:8],B[15:8],cout0,O[15:8],Cout);
+endmodule
+
+module ZCNO_register(E,FunSel,I,Q,CLK);
+    input wire E;
+    input wire [1:0] FunSel;
+    input wire [3:0] I;
+    input wire CLK;
+    
+    output wire [3:0] Q;
+    
+    //Mux if S=0, output is 0, if S=1, output is I
+    //Also mean, S=0 is for clear, S=1 is for load
+    wire [3:0] I_funsel_mux;
+    MUX2_1_4bit mux0(I,4'b0,I_funsel_mux,FunSel[0]);
+    
+    //Mux if S=0, output is binary 1, if S=1, output is complement of it
+    //S is cin for adder/substractor, so if S=1 is A-B(A+B+1), if S=0 A+B will be performed
+    wire [3:0] add_subst_Bin;
+    MUX2_1_4bit mux1(4'b1,~(4'b1),add_subst_Bin,~FunSel[0]);
+    
+    //If Cin is 1, it will decrement Q by one, if it is 0, it will increment Q by one
+    wire [3:0] adder_subst_output;
+    wire adder_subst_cout;
+    Adder_Substractor_4bit adder_substractor(Q,add_subst_Bin,~FunSel[0],adder_subst_output,adder_subst_cout);
+
+    //If the first bit of funsel is 1, register will be loaded or reseted
+    //If the first bit of funsel is 0, register will be decremented or incremented by one
+    //This mux will send proper inputs to D flip flops for these operations
+    wire [3:0] D;
+    MUX2_1_4bit mux2(adder_subst_output,I_funsel_mux,D,FunSel[1]);
+    
+    //Synchronized D flip flops
+    D_Flip_Flop dff0(D[0],CLK,Q[0],E);
+    D_Flip_Flop dff1(D[1],CLK,Q[1],E);
+    D_Flip_Flop dff2(D[2],CLK,Q[2],E);
+    D_Flip_Flop dff3(D[3],CLK,Q[3],E); 
+
 endmodule
 
 module PART1_8bit(E,FunSel,I,Q,CLK);
@@ -417,7 +490,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     //if funsel[0] is 1, addition with carry flag is performed
     //if funsel[0] is 0 and (FunSel[0]|FunSel[1]) is 0, A+B, if (FunSel[0]|FunSel[1]) is 1 A-B is performed
     MUX2_1_1bit mux_cin((FunSel[0]|FunSel[1]),OutFlag[2],cin,FunSel[0]); 
-    Adder_Substractor_8bit(A,B_adder,cin,adder_result,cout);
+    Adder_Substractor_8bit adder_substractor(A,B_adder,cin,adder_result,cout);
     
     //check for carry flag
     wire shifter_carry;
@@ -443,7 +516,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     MUX2_1_1bit o_decider3(OutFlag[3],decided_o,InFlag[3],FunSel[2]&(~FunSel[0] | (FunSel[3]&FunSel[1]) | (~FunSel[3]&~FunSel[1])));   
     
     //check for zero flag 
-    assign OutFlag[0] = ~(OutALU[0]|OutALU[1]|OutALU[2]|OutALU[3]|OutALU[4]|OutALU[5]|OutALU[6]|OutALU[7]);
+    assign InFlag[0] = ~(OutALU[0]|OutALU[1]|OutALU[2]|OutALU[3]|OutALU[4]|OutALU[5]|OutALU[6]|OutALU[7]);
     
     //check for negative flag 
     //if funsel is 1101 negative flag will not be effected
@@ -468,10 +541,8 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     MUX16_4_8bit alu(A,B,~A,~B,adder_result,adder_result,adder_result,(A&B),(A|B),((A&~B)|(~A&B)),shift,shift,shift,shift,shift,shift,OutALU,FunSel);
     
     //ZCNO register. We used the first 4 bit of our 8 bit register we created in part 1 
-    wire [7:0] OutFlag_8; 
-    wire [7:0] InFlag_masked = InFlag&8'b00001111;
-    PART1_8bit ZCNO_reg(1'b1,2'b10,InFlag_masked,OutFlag_8,CLK);
-    assign OutFlag = OutFlag_8[3:0];
+    
+    ZCNO_register ZCNO_reg(1'b1,2'b10,InFlag,OutFlag,CLK);
     
 endmodule
 
@@ -521,35 +592,35 @@ module ALUSystem(
     input wire Clock
     );
     
-    wire [7:0] OutA;
-    wire [7:0] OutB;
-    wire [7:0] OutALU;
-    wire [7:0] OutARF; //address register file part2b
-    wire [7:0] OutARF_Address;
-    wire [7:0] Memory_I;
-    wire [7:0] OutIR07;//IR(0-7)
-    wire [7:0] OutMUXA;
-    wire [7:0] OutMUXB;
-    wire [7:0] OutMUXC;
+    wire [7:0] AOut;
+    wire [7:0] BOut;
+    wire [7:0] ALUOut;
+    wire [7:0] ARF_COut; //address register file part2b
+    wire [7:0] Address;
+    wire [7:0] MemoryOut;
+    wire [7:0] IROut;//IR(0-7)
+    wire [7:0] MuxAOut;
+    wire [7:0] MuxBOut;
+    wire [7:0] MuxCOut;
     wire [15:0] temp_I;
-    wire [3:0] OutFlag;
+    wire [3:0] ALUOutFlag;
     
-    PART2_a register_file(RF_FunSel,RF_OutASel,RF_OutBSel,RF_RegSel,OutMUXA,OutA,OutB,Clock);
+    PART2_a register_file(RF_FunSel,RF_OutASel,RF_OutBSel,RF_RegSel,MuxAOut,AOut,BOut,Clock);
     
-    PART2_b ARF(ARF_FunSel,ARF_OutCSel,ARF_OutDSel,ARF_RegSel,OutMUXB,OutARF,OutARF_Address,Clock);
+    PART2_b ARF(ARF_FunSel,ARF_OutCSel,ARF_OutDSel,ARF_RegSel,MuxBOut,ARF_COut,Address,Clock);
     
-    Memory mem(OutARF_Address,OutALU,Mem_WR,Mem_CS,Clock,Memory_I);
+    Memory mem(Address,ALUOut,Mem_WR,Mem_CS,Clock,MemoryOut);
     
     
-    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,Memory_I,temp_I,Clock);
+    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,MemoryOut,temp_I,Clock);
     
-    assign OutIR07 = temp_I[7:0];
+    assign IROut = temp_I[7:0];
     
-    MUX4_1_8bit MUXA(OutIR07,Memory_I,OutARF,OutALU,OutMUXA,MuxASel);
-    MUX4_1_8bit MUXB(1'b0,OutIR07,Memory_I,OutALU,OutMUXB,MuxBSel);
-    MUX2_1_8bit MUXC(OutARF,OutA,OutMUXC,MuxCSel);
+    MUX4_1_8bit MUXA(IROut,MemoryOut,ARF_COut,ALUOut,MuxAOut,MuxASel);
+    MUX4_1_8bit MUXB(8'b0,IROut,MemoryOut,ALUOut,MuxBOut,MuxBSel);
+    MUX2_1_8bit MUXC(ARF_COut,AOut,MuxCOut,MuxCSel);
     
-    PART3 ALU(OutMUXC,OutB,ALU_FunSel,OutALU,OutFlag,Clock);
+    PART3 ALU(MuxCOut,BOut,ALU_FunSel,ALUOut,ALUOutFlag,Clock);
     
 endmodule
         

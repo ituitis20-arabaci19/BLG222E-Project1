@@ -1,0 +1,2310 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Sun May  8 14:45:47 2022
+# Process ID: 23412
+# Current directory: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8592 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
+# Log file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/vivado.log
+# Journal file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+set_property top PART3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PART3' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PART3_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D_Latch
+INFO: [VRFC 10-311] analyzing module D_Flip_Flop
+INFO: [VRFC 10-311] analyzing module MUX2_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX4_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX16_4_8bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_16bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_1bit
+INFO: [VRFC 10-311] analyzing module Full_Adder_1bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_8bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_16bit
+INFO: [VRFC 10-311] analyzing module PART1_8bit
+INFO: [VRFC 10-311] analyzing module PART1_16bit
+INFO: [VRFC 10-311] analyzing module PART2_a
+INFO: [VRFC 10-311] analyzing module PART2_b
+INFO: [VRFC 10-311] analyzing module PART2_c
+INFO: [VRFC 10-311] analyzing module PART3
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-311] analyzing module ALUSystem
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART3_behav xil_defaultlib.PART3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MUX2_1_8bit
+Compiling module xil_defaultlib.MUX2_1_1bit
+Compiling module xil_defaultlib.Full_Adder_1bit
+Compiling module xil_defaultlib.Adder_Substractor_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.MUX16_4_8bit
+Compiling module xil_defaultlib.D_Latch
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.PART1_8bit
+Compiling module xil_defaultlib.PART3
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PART3_behav
+
+****** Webtalk v2017.4.1 (64-bit)
+  **** SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+  **** IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/xsim.dir/PART3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun May  8 15:25:27 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 753.816 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PART3_behav -key {Behavioral:sim_1:Functional:PART3} -tclbatch {PART3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source PART3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PART3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 770.520 ; gain = 16.703
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PART3' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PART3_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART3_behav xil_defaultlib.PART3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PART3_behav -key {Behavioral:sim_1:Functional:PART3} -tclbatch {PART3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source PART3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PART3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: PART3
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 878.762 ; gain = 95.961
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART3' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:400]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_8bit' (1#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:154]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_1bit' (2#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:154]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:178]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:163]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (3#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:163]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (4#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:178]
+INFO: [Synth 8-638] synthesizing module 'MUX16_4_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'MUX4_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:72]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_1_8bit' (5#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:72]
+INFO: [Synth 8-256] done synthesizing module 'MUX16_4_8bit' (6#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'PART1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:222]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (7#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (8#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_8bit' (9#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:222]
+INFO: [Synth 8-256] done synthesizing module 'PART3' (10#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:400]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.543 ; gain = 147.742
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 930.543 ; gain = 147.742
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1269.680 ; gain = 486.879
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1269.680 ; gain = 486.879
+set_property top PART3_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PART3_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PART3_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART3_test_behav xil_defaultlib.PART3_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MUX2_1_8bit
+Compiling module xil_defaultlib.MUX2_1_1bit
+Compiling module xil_defaultlib.Full_Adder_1bit
+Compiling module xil_defaultlib.Adder_Substractor_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.MUX16_4_8bit
+Compiling module xil_defaultlib.D_Latch
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.PART1_8bit
+Compiling module xil_defaultlib.PART3
+Compiling module xil_defaultlib.PART3_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PART3_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PART3_test_behav -key {Behavioral:sim_1:Functional:PART3_test} -tclbatch {PART3_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source PART3_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PART3_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.680 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 354 ns
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: PART3
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART3' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:400]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_8bit' (1#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:154]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_1bit' (2#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:154]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:178]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:163]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (3#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:163]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (4#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:178]
+INFO: [Synth 8-638] synthesizing module 'MUX16_4_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'MUX4_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:72]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_1_8bit' (5#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:72]
+INFO: [Synth 8-256] done synthesizing module 'MUX16_4_8bit' (6#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:92]
+INFO: [Synth 8-638] synthesizing module 'PART1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:222]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (7#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (8#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'PART1_8bit' (9#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:222]
+INFO: [Synth 8-256] done synthesizing module 'PART3' (10#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:400]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1319.742 ; gain = 50.062
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1319.742 ; gain = 50.062
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1319.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART3' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:473]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:68]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_8bit' (1#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:68]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:168]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_1bit' (2#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:168]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:214]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:177]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (3#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:177]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (4#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:214]
+INFO: [Synth 8-638] synthesizing module 'MUX16_4_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:106]
+INFO: [Synth 8-638] synthesizing module 'MUX4_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:86]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_1_8bit' (5#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:86]
+INFO: [Synth 8-256] done synthesizing module 'MUX16_4_8bit' (6#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:106]
+INFO: [Synth 8-638] synthesizing module 'ZCNO_register' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:258]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_4bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_4bit' (7#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_4bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:192]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_4bit' (8#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:192]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (9#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (10#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'ZCNO_register' (11#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:258]
+INFO: [Synth 8-256] done synthesizing module 'PART3' (12#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:473]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1343.672 ; gain = 23.930
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin ZCNO_reg:I[0] to constant 0 [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:545]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1343.672 ; gain = 23.930
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1347.168 ; gain = 27.426
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PART3_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PART3_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D_Latch
+INFO: [VRFC 10-311] analyzing module D_Flip_Flop
+INFO: [VRFC 10-311] analyzing module MUX2_1_4bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX4_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX16_4_8bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_16bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_1bit
+INFO: [VRFC 10-311] analyzing module Full_Adder_1bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_4bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_8bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_16bit
+INFO: [VRFC 10-311] analyzing module ZCNO_register
+INFO: [VRFC 10-311] analyzing module PART1_8bit
+INFO: [VRFC 10-311] analyzing module PART1_16bit
+INFO: [VRFC 10-311] analyzing module PART2_a
+INFO: [VRFC 10-311] analyzing module PART2_b
+INFO: [VRFC 10-311] analyzing module PART2_c
+INFO: [VRFC 10-311] analyzing module PART3
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-311] analyzing module ALUSystem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module part1_8bit_test
+INFO: [VRFC 10-311] analyzing module part1_16bit_test
+INFO: [VRFC 10-311] analyzing module PART2_a_test
+INFO: [VRFC 10-311] analyzing module PART2_b_test
+INFO: [VRFC 10-311] analyzing module PART2_c_test
+INFO: [VRFC 10-311] analyzing module PART3_test
+INFO: [VRFC 10-311] analyzing module Project1Test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART3_test_behav xil_defaultlib.PART3_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MUX2_1_8bit
+Compiling module xil_defaultlib.MUX2_1_1bit
+Compiling module xil_defaultlib.Full_Adder_1bit
+Compiling module xil_defaultlib.Adder_Substractor_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.MUX16_4_8bit
+Compiling module xil_defaultlib.MUX2_1_4bit
+Compiling module xil_defaultlib.Adder_Substractor_4bit
+Compiling module xil_defaultlib.D_Latch
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.ZCNO_register
+Compiling module xil_defaultlib.PART3
+Compiling module xil_defaultlib.PART3_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PART3_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PART3_test_behav -key {Behavioral:sim_1:Functional:PART3_test} -tclbatch {PART3_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source PART3_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PART3_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.168 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 354 ns
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.168 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PART3' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:473]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:68]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_8bit' (1#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:68]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:168]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_1bit' (2#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:168]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:214]
+INFO: [Synth 8-638] synthesizing module 'Full_Adder_1bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:177]
+INFO: [Synth 8-256] done synthesizing module 'Full_Adder_1bit' (3#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:177]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_8bit' (4#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:214]
+INFO: [Synth 8-638] synthesizing module 'MUX16_4_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:106]
+INFO: [Synth 8-638] synthesizing module 'MUX4_1_8bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:86]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_1_8bit' (5#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:86]
+INFO: [Synth 8-256] done synthesizing module 'MUX16_4_8bit' (6#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:106]
+INFO: [Synth 8-638] synthesizing module 'ZCNO_register' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:258]
+INFO: [Synth 8-638] synthesizing module 'MUX2_1_4bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-256] done synthesizing module 'MUX2_1_4bit' (7#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:54]
+INFO: [Synth 8-638] synthesizing module 'Adder_Substractor_4bit' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:192]
+INFO: [Synth 8-256] done synthesizing module 'Adder_Substractor_4bit' (8#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:192]
+INFO: [Synth 8-638] synthesizing module 'D_Flip_Flop' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-638] synthesizing module 'D_Latch' [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Latch' (9#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_Flip_Flop' (10#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:39]
+INFO: [Synth 8-256] done synthesizing module 'ZCNO_register' (11#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:258]
+INFO: [Synth 8-256] done synthesizing module 'PART3' (12#1) [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:473]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1352.516 ; gain = 5.348
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1352.516 ; gain = 5.348
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1375.410 ; gain = 28.242
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'PART3_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PART3_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D_Latch
+INFO: [VRFC 10-311] analyzing module D_Flip_Flop
+INFO: [VRFC 10-311] analyzing module MUX2_1_4bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX4_1_8bit
+INFO: [VRFC 10-311] analyzing module MUX16_4_8bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_16bit
+INFO: [VRFC 10-311] analyzing module MUX2_1_1bit
+INFO: [VRFC 10-311] analyzing module Full_Adder_1bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_4bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_8bit
+INFO: [VRFC 10-311] analyzing module Adder_Substractor_16bit
+INFO: [VRFC 10-311] analyzing module ZCNO_register
+INFO: [VRFC 10-311] analyzing module PART1_8bit
+INFO: [VRFC 10-311] analyzing module PART1_16bit
+INFO: [VRFC 10-311] analyzing module PART2_a
+INFO: [VRFC 10-311] analyzing module PART2_b
+INFO: [VRFC 10-311] analyzing module PART2_c
+INFO: [VRFC 10-311] analyzing module PART3
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-311] analyzing module ALUSystem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module part1_8bit_test
+INFO: [VRFC 10-311] analyzing module part1_16bit_test
+INFO: [VRFC 10-311] analyzing module PART2_a_test
+INFO: [VRFC 10-311] analyzing module PART2_b_test
+INFO: [VRFC 10-311] analyzing module PART2_c_test
+INFO: [VRFC 10-311] analyzing module PART3_test
+INFO: [VRFC 10-311] analyzing module Project1Test
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot PART3_test_behav xil_defaultlib.PART3_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MUX2_1_8bit
+Compiling module xil_defaultlib.MUX2_1_1bit
+Compiling module xil_defaultlib.Full_Adder_1bit
+Compiling module xil_defaultlib.Adder_Substractor_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.MUX16_4_8bit
+Compiling module xil_defaultlib.MUX2_1_4bit
+Compiling module xil_defaultlib.Adder_Substractor_4bit
+Compiling module xil_defaultlib.D_Latch
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.ZCNO_register
+Compiling module xil_defaultlib.PART3
+Compiling module xil_defaultlib.PART3_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot PART3_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PART3_test_behav -key {Behavioral:sim_1:Functional:PART3_test} -tclbatch {PART3_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source PART3_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PART3_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+set_property top Project1Test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Project1Test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/RAM.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/TestBench.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Project1Test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto f97be7fe3a3244819be057ad0ade57cb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Project1Test_behav xil_defaultlib.Project1Test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 2 differs from formal bit length 1 for port MuxCSel [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v:237]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port S0 [C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sources_1/new/designs.v:620]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.MUX2_1_8bit
+Compiling module xil_defaultlib.Full_Adder_1bit
+Compiling module xil_defaultlib.Adder_Substractor_8bit
+Compiling module xil_defaultlib.D_Latch
+Compiling module xil_defaultlib.D_Flip_Flop
+Compiling module xil_defaultlib.PART1_8bit
+Compiling module xil_defaultlib.MUX4_1_8bit
+Compiling module xil_defaultlib.PART2_a
+Compiling module xil_defaultlib.PART2_b
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.MUX2_1_16bit
+Compiling module xil_defaultlib.Adder_Substractor_16bit
+Compiling module xil_defaultlib.PART1_16bit
+Compiling module xil_defaultlib.PART2_c
+Compiling module xil_defaultlib.MUX2_1_1bit
+Compiling module xil_defaultlib.MUX16_4_8bit
+Compiling module xil_defaultlib.MUX2_1_4bit
+Compiling module xil_defaultlib.Adder_Substractor_4bit
+Compiling module xil_defaultlib.ZCNO_register
+Compiling module xil_defaultlib.PART3
+Compiling module xil_defaultlib.ALUSystem
+Compiling module xil_defaultlib.Project1Test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Project1Test_behav
+
+****** Webtalk v2017.4.1 (64-bit)
+  **** SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+  **** IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim/xsim.dir/Project1Test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun May  8 15:57:08 2022...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Project1Test_behav -key {Behavioral:sim_1:Functional:Project1Test} -tclbatch {Project1Test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source Project1Test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/Project1Test/TestVectors" to the wave window because it has 360036 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+# run 1000ns
+WARNING: File alusystem_tb.mem referenced on C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.srcs/sim_1/new/simulations.v at line 254 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+Input Values:
+Operation: x
+Register File: OutASel: x, OutBSel: x, FunSel: x, Regsel:  x
+ALU FunSel:  x
+Addres Register File: OutCSel: x, OutDSel: x, FunSel: x, Regsel: x
+Instruction Register: LH: x, Enable: x, FunSel: x
+Memory: WR: x, CS: x
+MuxASel: x, MuxBSel: x, MuxCSel: x
+
+Ouput Values:
+Register File: AOut:   x, BOut:   x
+ALUOut:   x, ALUOutFlag:  x, ALUOutFlags: Z:x, C:x, N:x, O:x,
+Address Register File: COut:   x, DOut (Address):   x
+Memory Out:   x
+Instruction Register: IROut:   x
+MuxAOut:   x, MuxBOut:   x, MuxCOut:   x
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Project1Test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1375.410 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  8 16:14:30 2022...
