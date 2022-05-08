@@ -88,6 +88,42 @@ module MUX4_1_8bit(S0,S1,S2,S3,O,S);
     assign O[7] = (S0[7]&(~S[0]&~S[1])) | (S1[7]&(S[0]&~S[1])) | (S2[7]&(~S[0]&S[1])) | (S3[7]&(S[0]&S[1]));
     
 endmodule
+
+module MUX16_4_8bit(S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15,O,S);
+    input wire [7:0] S0;
+    input wire [7:0] S1;
+    input wire [7:0] S2;
+    input wire [7:0] S3;
+    input wire [7:0] S4;
+    input wire [7:0] S5;
+    input wire [7:0] S6;
+    input wire [7:0] S7;
+    input wire [7:0] S8;
+    input wire [7:0] S9;
+    input wire [7:0] S10;
+    input wire [7:0] S11;   
+    input wire [7:0] S12;
+    input wire [7:0] S13;
+    input wire [7:0] S14;
+    input wire [7:0] S15;
+    input wire [3:0] S;
+    
+    wire [7:0] first;
+    wire [7:0] second;
+    wire [7:0] third;
+    wire [7:0] fourth;
+    
+    MUX4_1_8bit m1(S0,S1,S2,S3,first,S[1:0]);
+    MUX4_1_8bit m2(S4,S5,S6,S7,second,S[1:0]);
+    MUX4_1_8bit m3(S8,S9,S10,S11,third,S[1:0]);
+    MUX4_1_8bit m4(S12,S13,S14,S15,fourth,S[1:0]);
+    
+    output wire [7:0] O;
+    
+    MUX4_1_8bit final(first,second,third,fourth,O,S[3:2]);
+    
+endmodule
+
         
 module MUX2_1_16bit(S0,S1,O,S);
     input wire [15:0] S0;
@@ -113,6 +149,15 @@ module MUX2_1_16bit(S0,S1,O,S);
     assign O[14] = (S0[14]&(~S)) | (S1[14]&S);
     assign O[15] = (S0[15]&(~S)) | (S1[15]&S);
     
+endmodule
+
+module MUX2_1_1bit(S0,S1,O,S);
+    input S0;
+    input S1;
+    output O;
+    input S;
+    
+    assign O = S0&~S | S1&S; 
 endmodule
 
 module Full_Adder_1bit(A,B,Cin,O,Cout);
@@ -349,6 +394,162 @@ module PART2_c(E,LH,FunSel,I,IRout,CLK);
     
     
     PART1_16bit IR_reg(E,FunSel,LOAD,IRout,CLK);
+    
+endmodule
+
+module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
+    input wire [7:0] A;
+    input wire [7:0] B;
+    input wire [3:0] FunSel;
+    output wire [7:0] OutALU;
+    output wire [3:0] OutFlag;
+    input wire CLK;
+    
+    wire [3:0] InFlag;
+    
+    //adder
+    wire [7:0] B_adder;
+    wire cin;
+    wire cout;
+    wire [7:0]adder_result;
+    //Decided whether B or its complement is sent to adder/substracter
+    MUX2_1_8bit adder(B,~B,B_adder,FunSel[1]);
+    //if funsel[0] is 1, addition with carry flag is performed
+    //if funsel[0] is 0 and (FunSel[0]|FunSel[1]) is 0, A+B, if (FunSel[0]|FunSel[1]) is 1 A-B is performed
+    MUX2_1_1bit mux_cin((FunSel[0]|FunSel[1]),OutFlag[2],cin,FunSel[0]); 
+    Adder_Substractor_8bit(A,B_adder,cin,adder_result,cout);
+    
+    //check for carry flag
+    wire shifter_carry;
+    wire decided_carry;
+    //check if carry coming from left shift or right shift
+    MUX2_1_1bit c_decider1(A[7],A[0],shifter_carry,FunSel[0]);  
+    //check if carry coming from adder/substractor or from shifter  
+    MUX2_1_1bit c_decider2(cout,shifter_carry,decided_carry,FunSel[3]);    
+    //check if carry output should be effected or not
+    MUX2_1_1bit c_decider3(OutFlag[1],decided_carry,InFlag[1],(FunSel[3]&FunSel[1])|(FunSel[2]&~FunSel[3]&(~FunSel[1]|~FunSel[0])));
+    
+    //check for overflow flag
+    wire decided_o;
+    wire shifter_o;
+    //check if overflow coming from left shift or right shift
+    MUX2_1_1bit o_decider1((~A[7]&A[6] | A[7]&~A[6]), (~A[7]&A[0] | A[7]&~A[0]) ,shifter_o,FunSel[0]); 
+    //check if overflow coming from adder/substractor or from shifter 
+    wire decided_B = ~B[7]&FunSel[1] | B[7]&~FunSel[1];
+    wire and1 = ~A[7]&adder_result[7]&~decided_B;
+    wire and2 = A[7]&~adder_result[7]&decided_B;
+    MUX2_1_1bit o_decider2(and1|and2,shifter_o,decided_o,FunSel[3]);   
+    //check if overflow output should be effected or not
+    MUX2_1_1bit o_decider3(OutFlag[3],decided_o,InFlag[3],FunSel[2]&(~FunSel[0] | (FunSel[3]&FunSel[1]) | (~FunSel[3]&~FunSel[1])));   
+    
+    //check for zero flag 
+    assign OutFlag[0] = ~(OutALU[0]|OutALU[1]|OutALU[2]|OutALU[3]|OutALU[4]|OutALU[5]|OutALU[6]|OutALU[7]);
+    
+    //check for negative flag 
+    //if funsel is 1101 negative flag will not be effected
+    MUX2_1_1bit n_decider(OutFlag[2],OutALU[7],InFlag[2],~(FunSel[0]&~FunSel[1]&FunSel[2]&FunSel[3]));       
+    
+    //shifter 
+    wire [7:0] shift; //shifted A
+    //If LSB of Funsel is 0, A is shifted to left, otherwise to right
+    //If both FunSel[1] and FunSel[2] are 1 and FunSel[0] is 0, it performs circular left shift and puts C to LSB, otherwise it puts 0
+    MUX2_1_1bit sf0((OutFlag[1]&FunSel[1]&FunSel[2]),A[1],shift[0],FunSel[0]);
+    MUX2_1_1bit sf1(A[0],A[2],shift[1],FunSel[0]);
+    MUX2_1_1bit sf2(A[1],A[3],shift[2],FunSel[0]);
+    MUX2_1_1bit sf3(A[2],A[4],shift[3],FunSel[0]);
+    MUX2_1_1bit sf4(A[3],A[5],shift[4],FunSel[0]);
+    MUX2_1_1bit sf5(A[4],A[6],shift[5],FunSel[0]);
+    MUX2_1_1bit sf6(A[5],A[7],shift[6],FunSel[0]);   
+    //If both FunSel[1] and FunSel[2] are 1 and FunSel[0] is 1, it performs circular right shift and puts MSB to C,
+    //If both FunSel[1] is 0 and FunSel[2] is 1 and FunSel[0] is 1, it performs arithmetic right shift and puts MSB to MSB,
+    //otherwise it puts 0 to MSB
+    MUX2_1_1bit sf7(A[6],((OutFlag[1]&FunSel[1]&FunSel[2])|(A[7]&~FunSel[1]&FunSel[2])),shift[7],FunSel[0]);
+   
+    MUX16_4_8bit alu(A,B,~A,~B,adder_result,adder_result,adder_result,(A&B),(A|B),((A&~B)|(~A&B)),shift,shift,shift,shift,shift,shift,OutALU,FunSel);
+    
+    //ZCNO register. We used the first 4 bit of our 8 bit register we created in part 1 
+    wire [7:0] OutFlag_8; 
+    wire [7:0] InFlag_masked = InFlag&8'b00001111;
+    PART1_8bit ZCNO_reg(1'b1,2'b10,InFlag_masked,OutFlag_8,CLK);
+    assign OutFlag = OutFlag_8[3:0];
+    
+endmodule
+
+module Memory(
+    input wire[7:0] address,
+    input wire[7:0] data,
+    input wire wr, //Read = 0, Write = 1
+    input wire cs, //Chip is enable when cs = 0
+    input wire clock,
+    output reg[7:0] o // Output
+);
+    //Declaration oýf the RAM Area
+    reg[7:0] RAM_DATA[0:255];
+    //Read Ram data from the file
+    initial $readmemh("RAM.mem", RAM_DATA);
+    //Read the selected data from RAM
+    always @(*) begin
+        o = ~wr && ~cs ? RAM_DATA[address] : 8'hZ;
+    end
+    
+    //Write the data to RAM
+    always @(posedge clock) begin
+        if (wr && ~cs) begin
+            RAM_DATA[address] <= data; 
+        end
+    end
+endmodule
+
+module ALUSystem(
+    input wire [1:0] RF_OutASel, 
+    input wire [1:0] RF_OutBSel, 
+    input wire [1:0] RF_FunSel,
+    input wire [3:0] RF_RegSel,
+    input wire [3:0] ALU_FunSel,
+    input wire [1:0] ARF_OutCSel, 
+    input wire [1:0] ARF_OutDSel, 
+    input wire [1:0] ARF_FunSel,
+    input wire [2:0] ARF_RegSel,
+    input wire IR_LH,
+    input wire IR_Enable,
+    input wire [1:0] IR_Funsel,
+    input wire Mem_WR,
+    input wire Mem_CS,
+    input wire [1:0] MuxASel,
+    input wire [1:0] MuxBSel,
+    input wire MuxCSel,
+    input wire Clock
+    );
+    
+    wire [7:0] OutA;
+    wire [7:0] OutB;
+    wire [7:0] OutALU;
+    wire [7:0] OutARF; //address register file part2b
+    wire [7:0] OutARF_Address;
+    wire [7:0] Memory_I;
+    wire [7:0] OutIR07;//IR(0-7)
+    wire [7:0] OutMUXA;
+    wire [7:0] OutMUXB;
+    wire [7:0] OutMUXC;
+    wire [15:0] temp_I;
+    wire [3:0] OutFlag;
+    
+    PART2_a register_file(RF_FunSel,RF_OutASel,RF_OutBSel,RF_RegSel,OutMUXA,OutA,OutB,Clock);
+    
+    PART2_b ARF(ARF_FunSel,ARF_OutCSel,ARF_OutDSel,ARF_RegSel,OutMUXB,OutARF,OutARF_Address,Clock);
+    
+    Memory mem(OutARF_Address,OutALU,Mem_WR,Mem_CS,Clock,Memory_I);
+    
+    
+    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,Memory_I,temp_I,Clock);
+    
+    assign OutIR07 = temp_I[7:0];
+    
+    MUX4_1_8bit MUXA(OutIR07,Memory_I,OutARF,OutALU,OutMUXA,MuxASel);
+    MUX4_1_8bit MUXB(1'b0,OutIR07,Memory_I,OutALU,OutMUXB,MuxBSel);
+    MUX2_1_8bit MUXC(OutARF,OutA,OutMUXC,MuxCSel);
+    
+    PART3 ALU(OutMUXC,OutB,ALU_FunSel,OutALU,OutFlag,Clock);
     
 endmodule
         

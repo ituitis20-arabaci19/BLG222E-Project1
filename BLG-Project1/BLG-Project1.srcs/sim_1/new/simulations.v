@@ -156,6 +156,25 @@ module PART2_c_test();
     end
 endmodule
 
+module PART3_test();
+    reg [7:0] A;
+    reg [7:0] B;
+    reg [3:0] FunSel;
+    wire [7:0] OutALU;
+    wire [3:0] OutFlag;
+    reg CLK;
+    
+    PART3 uut(.A(A),.B(B),.FunSel(FunSel),.OutALU(OutALU),.OutFlag(OutFlag),.CLK(CLK));    
+    initial begin
+        CLK = 0;
+        forever #10 CLK = ~CLK;     
+    end  
+    
+    initial begin
+        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b1010;#25;           
+    end
+endmodule
+
 module Project1Test();
     //Input Registers of ALUSystem
     reg[1:0] RF_OutASel; 
