@@ -167,14 +167,14 @@ module PART3_test();
     PART3 uut(.A(A),.B(B),.FunSel(FunSel),.OutALU(OutALU),.OutFlag(OutFlag),.CLK(CLK));    
     initial begin
         CLK = 0;
-        forever #10 CLK = ~CLK;     
+        forever #5 CLK = ~CLK;     
     end  
     
     initial begin
         A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0000;#25;
-        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0001;#25;  
+        A = 8'b11100100; B = 8'b11100110; FunSel = 4'b0001;#25;  
         A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0010;#25;  
-        A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0011;#25;  
+        A = 8'b11100100; B = 8'b11100110; FunSel = 4'b0011;#25;  
         A = 8'b10101010; B = 8'b01010101; FunSel = 4'b0100;#25;
         A = 8'b10101010; B = 8'b01010101; FunSel = 4'b0101;#25;
         A = 8'b11100100; B = 8'b11100100; FunSel = 4'b0101;#25; //111001000

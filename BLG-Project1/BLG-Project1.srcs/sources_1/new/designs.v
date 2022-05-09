@@ -500,7 +500,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     //check if carry coming from adder/substractor or from shifter  
     MUX2_1_1bit c_decider2(cout,shifter_carry,decided_carry,FunSel[3]);    
     //check if carry output should be effected or not
-    MUX2_1_1bit c_decider3(OutFlag[1],decided_carry,InFlag[1],(FunSel[3]&FunSel[1])|(FunSel[2]&~FunSel[3]&(~FunSel[1]|~FunSel[0])));
+    MUX2_1_1bit c_decider3(OutFlag[2],decided_carry,InFlag[2],(FunSel[3]&FunSel[1])|(FunSel[2]&~FunSel[3]&(~FunSel[1]|~FunSel[0])));
     
     //check for overflow flag
     wire decided_o;
@@ -513,20 +513,20 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     wire and2 = A[7]&~adder_result[7]&decided_B;
     MUX2_1_1bit o_decider2(and1|and2,shifter_o,decided_o,FunSel[3]);   
     //check if overflow output should be effected or not
-    MUX2_1_1bit o_decider3(OutFlag[3],decided_o,InFlag[3],FunSel[2]&(~FunSel[0] | (FunSel[3]&FunSel[1]) | (~FunSel[3]&~FunSel[1])));   
+    MUX2_1_1bit o_decider3(OutFlag[0],decided_o,InFlag[0],FunSel[2]&(~FunSel[0] | (FunSel[3]&FunSel[1]) | (~FunSel[3]&~FunSel[1])));   
     
     //check for zero flag 
-    assign InFlag[0] = ~(OutALU[0]|OutALU[1]|OutALU[2]|OutALU[3]|OutALU[4]|OutALU[5]|OutALU[6]|OutALU[7]);
+    assign InFlag[3] = ~(OutALU[0]|OutALU[1]|OutALU[2]|OutALU[3]|OutALU[4]|OutALU[5]|OutALU[6]|OutALU[7]);
     
     //check for negative flag 
     //if funsel is 1101 negative flag will not be effected
-    MUX2_1_1bit n_decider(OutFlag[2],OutALU[7],InFlag[2],~(FunSel[0]&~FunSel[1]&FunSel[2]&FunSel[3]));       
+    MUX2_1_1bit n_decider(OutFlag[1],OutALU[7],InFlag[1],~(FunSel[0]&~FunSel[1]&FunSel[2]&FunSel[3]));       
     
     //shifter 
     wire [7:0] shift; //shifted A
     //If LSB of Funsel is 0, A is shifted to left, otherwise to right
     //If both FunSel[1] and FunSel[2] are 1 and FunSel[0] is 0, it performs circular left shift and puts C to LSB, otherwise it puts 0
-    MUX2_1_1bit sf0((OutFlag[1]&FunSel[1]&FunSel[2]),A[1],shift[0],FunSel[0]);
+    MUX2_1_1bit sf0((OutFlag[2]&FunSel[1]&FunSel[2]),A[1],shift[0],FunSel[0]);
     MUX2_1_1bit sf1(A[0],A[2],shift[1],FunSel[0]);
     MUX2_1_1bit sf2(A[1],A[3],shift[2],FunSel[0]);
     MUX2_1_1bit sf3(A[2],A[4],shift[3],FunSel[0]);
@@ -536,7 +536,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     //If both FunSel[1] and FunSel[2] are 1 and FunSel[0] is 1, it performs circular right shift and puts MSB to C,
     //If both FunSel[1] is 0 and FunSel[2] is 1 and FunSel[0] is 1, it performs arithmetic right shift and puts MSB to MSB,
     //otherwise it puts 0 to MSB
-    MUX2_1_1bit sf7(A[6],((OutFlag[1]&FunSel[1]&FunSel[2])|(A[7]&~FunSel[1]&FunSel[2])),shift[7],FunSel[0]);
+    MUX2_1_1bit sf7(A[6],((OutFlag[2]&FunSel[1]&FunSel[2])|(A[7]&~FunSel[1]&FunSel[2])),shift[7],FunSel[0]);
    
     MUX16_4_8bit alu(A,B,~A,~B,adder_result,adder_result,adder_result,(A&B),(A|B),((A&~B)|(~A&B)),shift,shift,shift,shift,shift,shift,OutALU,FunSel);
     
@@ -612,7 +612,7 @@ module ALUSystem(
     Memory mem(Address,ALUOut,Mem_WR,Mem_CS,Clock,MemoryOut);
     
     
-    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,MemoryOut,temp_I,Clock);
+    PART2_c IR(IR_Enable,~IR_LH,IR_Funsel,MemoryOut,temp_I,Clock);
     
     assign IROut = temp_I[7:0];
     
