@@ -2,10 +2,10 @@
 # Vivado v2017.4.1 (64-bit)
 # SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
 # IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
-# Start of session at: Sun May  8 11:00:07 2022
-# Process ID: 16008
+# Start of session at: Tue May 10 15:22:16 2022
+# Process ID: 252
 # Current directory: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16200 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16788 C:\Users\mertc\Desktop\BLG222E-Project1\BLG-Project1\BLG-Project1.xpr
 # Log file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/vivado.log
 # Journal file: C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1\vivado.jou
 #-----------------------------------------------------------
@@ -14,18 +14,8 @@ open_project C:/Users/mertc/Desktop/BLG222E-Project1/BLG-Project1/BLG-Project1.x
 update_compile_order -fileset sources_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top PART3_test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top PART3 [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
-launch_simulation
-launch_simulation
-source PART3_test.tcl
-close_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top Project1Test [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-launch_simulation
+synth_design -rtl -name rtl_1
+write_schematic -format pdf -orientation portrait -force C:/Users/mertc/Desktop/BLG222E-Project1/AssignmentFiles/schematic.pdf

@@ -542,7 +542,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     
     //ZCNO register. We used the first 4 bit of our 8 bit register we created in part 1 
     
-    ZCNO_register ZCNO_reg(1'b1,2'b10,InFlag,OutFlag,CLK);
+    ZCNO_register ZCNO_reg(1'b1,2'b10,InFlag,OutFlag,~CLK);
     
 endmodule
 
