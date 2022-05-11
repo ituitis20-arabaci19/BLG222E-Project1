@@ -98,6 +98,12 @@ module PART2_a_test();
         OutASel = 2'b00; OutBSel = 2'b11; FunSel = 2'b01; RegSel = 4'b0000; I = 8'b11100100; #25;
         OutASel = 2'b10; OutBSel = 2'b00; FunSel = 2'b00; RegSel = 4'b0000; I = 8'b11100100; #25;
         OutASel = 2'b00; OutBSel = 2'b01; FunSel = 2'b11; RegSel = 4'b0000; I = 8'b11100100; #25;
+        
+        OutASel = 2'b01; OutBSel = 2'b11; FunSel = 2'b10; RegSel = 4'b1000; I = 8'b01101101; #25;
+        OutASel = 2'b10; OutBSel = 2'b00; FunSel = 2'b01; RegSel = 4'b0101; I = 8'b01101101; #25;
+        OutASel = 2'b11; OutBSel = 2'b10; FunSel = 2'b01; RegSel = 4'b0000; I = 8'b01101101; #25;
+        OutASel = 2'b00; OutBSel = 2'b01; FunSel = 2'b00; RegSel = 4'b0000; I = 8'b01101101; #25;
+        OutASel = 2'b00; OutBSel = 2'b10; FunSel = 2'b11; RegSel = 4'b0000; I = 8'b01101101; #25;
     end
 endmodule
 
@@ -117,11 +123,17 @@ module PART2_b_test();
         forever #10 CLK = ~CLK;     
     end 
     initial begin
-        OutCSel = 2'b00; OutDSel = 2'b01; FunSel = 2'b10; RegSel = 4'b0000; I = 8'b11100100; #25;
-        OutCSel = 2'b00; OutDSel = 2'b10; FunSel = 2'b01; RegSel = 4'b0000; I = 8'b11100100; #25;
-        OutCSel = 2'b00; OutDSel = 2'b11; FunSel = 2'b01; RegSel = 4'b0000; I = 8'b11100100; #25;
-        OutCSel = 2'b10; OutDSel = 2'b00; FunSel = 2'b00; RegSel = 4'b0000; I = 8'b11100100; #25;
-        OutCSel = 2'b00; OutDSel = 2'b01; FunSel = 2'b11; RegSel = 4'b0000; I = 8'b11100100; #25;
+        OutCSel = 2'b00; OutDSel = 2'b01; FunSel = 2'b10; RegSel = 3'b000; I = 8'b11100100; #25;
+        OutCSel = 2'b00; OutDSel = 2'b10; FunSel = 2'b01; RegSel = 3'b000; I = 8'b11100100; #25;
+        OutCSel = 2'b00; OutDSel = 2'b11; FunSel = 2'b01; RegSel = 3'b000; I = 8'b11100100; #25;
+        OutCSel = 2'b10; OutDSel = 2'b00; FunSel = 2'b00; RegSel = 3'b000; I = 8'b11100100; #25;
+        OutCSel = 2'b00; OutDSel = 2'b01; FunSel = 2'b11; RegSel = 3'b000; I = 8'b11100100; #25;
+        
+        OutCSel = 2'b01; OutDSel = 2'b11; FunSel = 2'b10; RegSel = 3'b100; I = 8'b01101101; #25;
+        OutCSel = 2'b10; OutDSel = 2'b00; FunSel = 2'b01; RegSel = 3'b010; I = 8'b01101101; #25;
+        OutCSel = 2'b11; OutDSel = 2'b10; FunSel = 2'b01; RegSel = 3'b000; I = 8'b01101101; #25;
+        OutCSel = 2'b00; OutDSel = 2'b01; FunSel = 2'b00; RegSel = 3'b000; I = 8'b01101101; #25;
+        OutCSel = 2'b00; OutDSel = 2'b10; FunSel = 2'b11; RegSel = 3'b000; I = 8'b01101101; #25;
     end
 endmodule
 
@@ -270,22 +282,22 @@ module Project1Test();
         if (~Reset) // skip during reset
         begin
             $display("Input Values:");
-            $display("Operation: %d", Operation);
-            $display("Register File: OutASel: %d, OutBSel: %d, FunSel: %d, Regsel: %d", RF_OutASel, RF_OutBSel, RF_FunSel, RF_RegSel);            
+            $display("Operation: %b", Operation);
+            $display("Register File: OutASel: %b, OutBSel: %b, FunSel: %b, Regsel: %b", RF_OutASel, RF_OutBSel, RF_FunSel, RF_RegSel);            
             $display("ALU FunSel: %d", ALU_FunSel);
-            $display("Addres Register File: OutCSel: %d, OutDSel: %d, FunSel: %d, Regsel: %d", ARF_OutCSel, ARF_OutDSel, ARF_FunSel, ARF_RegSel);            
-            $display("Instruction Register: LH: %d, Enable: %d, FunSel: %d", IR_LH, IR_Enable, IR_Funsel);            
-            $display("Memory: WR: %d, CS: %d", Mem_WR, Mem_CS);
+            $display("Addres Register File: OutCSel: %b, OutDSel: %b, FunSel: %b, Regsel: %b", ARF_OutCSel, ARF_OutDSel, ARF_FunSel, ARF_RegSel);            
+            $display("Instruction Register: LH: %b, Enable: %b, FunSel: %b", IR_LH, IR_Enable, IR_Funsel);            
+            $display("Memory: WR: %b, CS: %b", Mem_WR, Mem_CS);
             $display("MuxASel: %d, MuxBSel: %d, MuxCSel: %d", MuxASel, MuxBSel, MuxCSel);
             
             $display("");
             $display("Ouput Values:");
-            $display("Register File: AOut: %d, BOut: %d", _ALUSystem.AOut, _ALUSystem.BOut);            
-            $display("ALUOut: %d, ALUOutFlag: %d, ALUOutFlags: Z:%d, C:%d, N:%d, O:%d,", _ALUSystem.ALUOut, _ALUSystem.ALUOutFlag, _ALUSystem.ALUOutFlag[3],_ALUSystem.ALUOutFlag[2],_ALUSystem.ALUOutFlag[1],_ALUSystem.ALUOutFlag[0]);
-            $display("Address Register File: COut: %d, DOut (Address): %d", _ALUSystem.ARF_COut, _ALUSystem.Address);            
-            $display("Memory Out: %d", _ALUSystem.MemoryOut);            
-            $display("Instruction Register: IROut: %d", _ALUSystem.IROut);            
-            $display("MuxAOut: %d, MuxBOut: %d, MuxCOut: %d", _ALUSystem.MuxAOut, _ALUSystem.MuxBOut, _ALUSystem.MuxCOut);
+            $display("Register File: AOut: %b, BOut: %b", _ALUSystem.AOut, _ALUSystem.BOut);            
+            $display("ALUOut: %b, ALUOutFlag: %b, ALUOutFlags: Z:%b, C:%b, N:%b, O:%b,", _ALUSystem.ALUOut, _ALUSystem.ALUOutFlag, _ALUSystem.ALUOutFlag[3],_ALUSystem.ALUOutFlag[2],_ALUSystem.ALUOutFlag[1],_ALUSystem.ALUOutFlag[0]);
+            $display("Address Register File: COut: %b, DOut (Address): %b", _ALUSystem.ARF_COut, _ALUSystem.Address);            
+            $display("Memory Out: %b", _ALUSystem.MemoryOut);            
+            $display("Instruction Register: IROut: %b", _ALUSystem.IROut);            
+            $display("MuxAOut: %b, MuxBOut: %b, MuxCOut: %b", _ALUSystem.MuxAOut, _ALUSystem.MuxBOut, _ALUSystem.MuxCOut);
             
             // increment array index and read next testvector
             VectorNum = VectorNum + 1;

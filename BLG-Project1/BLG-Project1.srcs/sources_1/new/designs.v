@@ -390,18 +390,18 @@ module PART2_a(FunSel,OutASel,OutBSel,RegSel,I,OutA,OutB,CLK);
     input wire [7:0] I;
     input wire CLK;
     
-    wire [7:0] Q1;
-    wire [7:0] Q2;
-    wire [7:0] Q3;
-    wire [7:0] Q4;
+    wire [7:0] Q1; //Output of R1
+    wire [7:0] Q2; //Output of R2
+    wire [7:0] Q3; //Output of R3
+    wire [7:0] Q4; //Output of R4
     
     output wire [7:0] OutA;
     output wire [7:0] OutB;
     
-    PART1_8bit R1(~RegSel[3],FunSel,I,Q1,CLK);
-    PART1_8bit R2(~RegSel[2],FunSel,I,Q2,CLK);
-    PART1_8bit R3(~RegSel[1],FunSel,I,Q3,CLK);    
-    PART1_8bit R4(~RegSel[0],FunSel,I,Q4,CLK);
+    PART1_8bit R1(~RegSel[3],FunSel,I,Q1,CLK); //If RegSel[3] is 0, R1 is enabled
+    PART1_8bit R2(~RegSel[2],FunSel,I,Q2,CLK); //If RegSel[2] is 0, R2 is enabled
+    PART1_8bit R3(~RegSel[1],FunSel,I,Q3,CLK); //If RegSel[1] is 0, R3 is enabled
+    PART1_8bit R4(~RegSel[0],FunSel,I,Q4,CLK); //If RegSel[0] is 0, R4 is enabled
     
     MUX4_1_8bit MUXA(Q1,Q2,Q3,Q4,OutA,OutASel);
     MUX4_1_8bit MUXB(Q1,Q2,Q3,Q4,OutB,OutBSel);
@@ -417,16 +417,16 @@ module PART2_b(FunSel,OutCSel,OutDSel,RegSel,I,OutC,OutD,CLK);
     input wire [7:0] I;
     input wire CLK;
     
-    wire [7:0] PC;
-    wire [7:0] AR;
-    wire [7:0] SP;
+    wire [7:0] PC; //Output of PC register
+    wire [7:0] AR; //Output of AR register
+    wire [7:0] SP; //Output of SP register
     
     output wire [7:0] OutC;
     output wire [7:0] OutD;
     
-    PART1_8bit PC_reg(~RegSel[2],FunSel,I,PC,CLK);
-    PART1_8bit AR_reg(~RegSel[1],FunSel,I,AR,CLK);    
-    PART1_8bit SR_reg(~RegSel[0],FunSel,I,SP,CLK);
+    PART1_8bit PC_reg(~RegSel[2],FunSel,I,PC,CLK); //If RegSel[2] is 0, PC is enabled
+    PART1_8bit AR_reg(~RegSel[1],FunSel,I,AR,CLK); //If RegSel[1] is 0, AR is enabled   
+    PART1_8bit SR_reg(~RegSel[0],FunSel,I,SP,CLK); //If RegSel[0] is 0, SR is enabled
     
     MUX4_1_8bit MUXA(PC,PC,AR,SP,OutC,OutCSel);
     MUX4_1_8bit MUXB(PC,PC,AR,SP,OutD,OutDSel);
@@ -441,30 +441,39 @@ module PART2_c(E,LH,FunSel,I,IRout,CLK);
     input wire [7:0] I;
     input wire CLK;
     
+    //MASK selection
+    // If we load I into IR(15-8), we need to mask IR(15-8), thus MASK will be 0000000011111111
+    // otherwise it will 1111111100000000
     wire [15:0] MASK;
-    MUX2_1_16bit mask_mux(16'b0000000011111111,16'b1111111100000000,MASK,LH);
+    MUX2_1_16bit mask_mux(16'b0000000011111111,16'b1111111100000000,MASK,LH); 
     
+    //Extend the length of load I.
+    //We fill right side of I with 0s and load it to ADD1.
+    //We fill left side of I with 0s and load it to ADD2.
+    //Then we will add one of these ADDs to masked register value 
     wire [15:0] ADD1;
     wire [15:0] ADD2;
     wire [7:0] CONST = 8'b0;
     assign ADD1[15:8] = I|CONST;
-    assign ADD1[7:0] = 8'b0;
-    
+    assign ADD1[7:0] = 8'b0; 
     assign ADD2[7:0] = I|CONST;
     assign ADD2[15:8] = 8'b0;
     
+    //Select ADD number which will be added to masked register value
     wire [15:0] ADD_RESULT;
     MUX2_1_16bit add_mux(ADD1,ADD2,ADD_RESULT,LH);
     
     output wire [15:0] IRout;
     
+    //Mask register value
     wire [15:0] MASKED_LOAD;
     assign MASKED_LOAD = IRout&MASK;
     
+    //Add extended load I to masked register value
+    //As a result we will get a 16 bit number ready to be loaded into register
     wire [15:0] LOAD;
     wire temp;
     Adder_Substractor_16bit load_adder(MASKED_LOAD,ADD_RESULT,1'b0,LOAD,temp);
-    
     
     PART1_16bit IR_reg(E,FunSel,LOAD,IRout,CLK);
     
@@ -542,7 +551,7 @@ module PART3(A,B,FunSel,OutALU,OutFlag,CLK);
     
     //ZCNO register. We used the first 4 bit of our 8 bit register we created in part 1 
     
-    ZCNO_register ZCNO_reg(1'b1,2'b10,InFlag,OutFlag,~CLK);
+    ZCNO_register ZCNO_reg(1'b1,2'b10,InFlag,OutFlag,CLK);
     
 endmodule
 
@@ -612,7 +621,7 @@ module ALUSystem(
     Memory mem(Address,ALUOut,Mem_WR,Mem_CS,Clock,MemoryOut);
     
     
-    PART2_c IR(IR_Enable,~IR_LH,IR_Funsel,MemoryOut,temp_I,Clock);
+    PART2_c IR(IR_Enable,IR_LH,IR_Funsel,MemoryOut,temp_I,Clock);
     
     assign IROut = temp_I[7:0];
     
